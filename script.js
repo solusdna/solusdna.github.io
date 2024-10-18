@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryButtons = document.querySelectorAll('.category-button');
     const baseCPMValue = document.querySelector('.cpm-value');
     const categoryList = document.querySelector('.category-list');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbar = document.querySelector('.navbar');
 
     const categoryData = {
         explorers: {
@@ -23,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'Video Sharing', ratio: 0.8 },
                 { name: 'News', ratio: 0.8 },
                 { name: 'Narrative Shill', ratio: 1.2 },
+                { name: 'Ambassador Program', ratio: 1.2 },
                 { name: 'Deep Analysis', ratio: 1.5 },
-                { name: 'Other/Special', ratio: 'TBD' }
             ]
         },
         ambassadors: {
@@ -35,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'News', ratio: 0.8 },
                 { name: 'Narrative Shill', ratio: 1.2 },
                 { name: 'Deep Analysis', ratio: 1.5 },
+                { name: 'StormTrade Academy', ratio: 1.2 },
+                { name: 'Trading Competitions', ratio: 1.2 },
                 { name: 'Other/Special', ratio: 'TBD' }
             ]
         }
@@ -73,7 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.taskboard').classList.add('hidden');
 
     ctaButton.addEventListener('click', () => {
-        ctaButton.classList.add('hidden');
+        const welcomeContainer = document.querySelector('.welcome-container');
+        welcomeContainer.classList.add('moved');
+        welcomeContainer.style.minHeight = 'auto';
+        
+        const purposeSection = document.querySelector('.purpose-section');
+        purposeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
         setTimeout(() => {
             document.querySelector('.purpose-section').classList.add('visible');
             document.querySelector('.ambassador-roles').classList.add('visible');
@@ -135,6 +145,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     toggleSwitch.addEventListener('change', toggleTheme, false);
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const yOffset = -80; // Учитываем высоту навбара
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.style.backgroundColor = 'rgba(26, 0, 51, 0.9)';
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            navbar.style.backgroundColor = 'transparent';
+            navbar.style.boxShadow = 'none';
+        }
+    });
 });
 
 function setTheme(themeName) {
@@ -158,3 +191,71 @@ function toggleTheme() {
         setTheme('light-theme');
     }
 })();
+
+const showFormButton = document.getElementById('showFormButton');
+const modalOverlay = document.getElementById('modalOverlay');
+const closeModal = document.querySelector('.close-modal');
+const applicationForm = document.getElementById('applicationForm');
+
+function toggleScrollLock() {
+    document.body.classList.toggle('scroll-lock');
+}
+
+showFormButton.addEventListener('click', () => {
+    modalOverlay.classList.add('visible');
+    toggleScrollLock();
+});
+
+closeModal.addEventListener('click', () => {
+    modalOverlay.classList.remove('visible');
+    toggleScrollLock();
+});
+
+modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('visible');
+        toggleScrollLock();
+    }
+});
+
+applicationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(applicationForm);
+    const data = Object.fromEntries(formData);
+    
+    // Здесь будет код для отправки данных в Google Таблицу
+    console.log('Form data:', data);
+    
+    // Очистка формы и закрытие модального окна
+    applicationForm.reset();
+    modalOverlay.classList.remove('visible');
+    toggleScrollLock();
+    
+    // Показываем всплывающее уведомление
+    showToast('Your application has been submitted successfully!');
+});
+
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.classList.add('visible');
+    }, 100);
+    
+    setTimeout(() => {
+        toast.classList.remove('visible');
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 300);
+    }, 3000);
+}
+
+const applyNowButton = document.getElementById('applyNowButton');
+
+applyNowButton.addEventListener('click', () => {
+    modalOverlay.classList.add('visible');
+    toggleScrollLock();
+});
