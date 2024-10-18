@@ -259,3 +259,4 @@ applyNowButton.addEventListener('click', () => {
     modalOverlay.classList.add('visible');
     toggleScrollLock();
 });
+
