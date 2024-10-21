@@ -1251,12 +1251,18 @@ body.scroll-lock {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    transition: min-height 0.5s ease;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--background-color);
+    z-index: 1000;
+    transition: transform 0.5s ease;
 }
 
 .welcome-container.moved {
-    min-height: auto;
+    transform: translateY(-100%);
 }
 
 .welcome-section {

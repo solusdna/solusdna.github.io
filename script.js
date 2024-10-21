@@ -79,12 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
     ctaButton.addEventListener('click', () => {
         const welcomeContainer = document.querySelector('.welcome-container');
         welcomeContainer.classList.add('moved');
-        welcomeContainer.style.minHeight = 'auto';
         
-        const purposeSection = document.querySelector('.purpose-section');
-        purposeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.body.style.overflow = 'auto';
         
         setTimeout(() => {
+            welcomeContainer.style.display = 'none';
+            
             document.querySelector('.purpose-section').classList.add('visible');
             document.querySelector('.ambassador-roles').classList.add('visible');
             document.querySelector('.rewards-section').classList.remove('hidden');
