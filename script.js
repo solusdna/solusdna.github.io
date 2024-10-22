@@ -222,17 +222,31 @@ applicationForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(applicationForm);
     const data = Object.fromEntries(formData);
+    data.platforms = Array.from(formData.getAll('platform'));
     
-    // Здесь будет код для отправки данных в Google Таблицу
-    console.log('Form data:', data);
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    loadingIndicator.classList.remove('hidden');
     
-    // Очистка формы и закрытие модального окна
-    applicationForm.reset();
-    modalOverlay.classList.remove('visible');
-    toggleScrollLock();
-    
-    // Показываем всплывающее уведомление
-    showToast('Your application has been submitted successfully!');
+    fetch('https://script.google.com/macros/s/AKfycbxw2s-VZdtQmpcj7ug594kbTo1s4paH1ynNDtM8bvbe0q24ztHYxDOd0FWYytuiyJDY/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(() => {
+        loadingIndicator.classList.add('hidden');
+        applicationForm.reset();
+        modalOverlay.classList.remove('visible');
+        toggleScrollLock();
+        showToast('Your application has been submitted successfully!');
+    })
+    .catch(error => {
+        loadingIndicator.classList.add('hidden');
+        console.error('Error:', error);
+        showToast('An error occurred. Please try again.');
+    });
 });
 
 function showToast(message) {
