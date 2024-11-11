@@ -1,12 +1,12 @@
 :root {
-    --primary-dark: #0C0E1C;
+    --primary-dark: #0F1016;
     --primary-purple: #451A93;
     --accent-green: #8EE96F;
     --accent-red: #EC3434;
     --white: #FFFFFF;
     --gray: #A7A8AC;
     
-    --background-color: var(--primary-dark);
+    --background-color: #0F1016;
     --text-color: var(--white);
     --accent-color: var(--accent-green);
     --card-background: rgba(69, 26, 147, 0.1);
@@ -20,7 +20,7 @@ body.dark-theme {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: var(--background-color);
     color: var(--text-color);
     margin: 0;
@@ -29,6 +29,12 @@ body {
     display: flex;
     flex-direction: column;
     transition: background 0.3s ease, color 0.3s ease;
+}
+
+body, p, .description, .nav-link, button, input, textarea, .platform-name, 
+.platform-cost, .category-name, .category-ratio, .welcome-description, 
+.role-content p, .footer-section ul li a {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -138,7 +144,7 @@ body {
     text-decoration: none;
     border: none;
     padding: 20px 40px;
-    font-family: 'Unbounden', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 650;
     font-size: 15px;
     line-height: 120%;

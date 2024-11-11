@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
 
-    // Navbar scroll effect
+    
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.style.backgroundColor = '#0C0E1C';
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Add page load animation
+    
     document.querySelector('.welcome-section').style.opacity = '0';
     setTimeout(() => {
         document.querySelector('.welcome-section').style.transition = 'opacity 0.8s ease-out';

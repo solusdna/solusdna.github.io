@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Инициализация переменных
     const navbar = document.querySelector('.navbar');
     const learnMoreButtons = document.querySelectorAll('.learn-more-button');
 
-    // Плавная прокрутка для навигации
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
             const targetId = link.getAttribute('href');
             
-            // Пропускаем внешние ссылки
             if (targetId.startsWith('http')) {
-                return true; // Позволяем браузеру обработать переход по ссылке
+                return true;
             }
 
             e.preventDefault();
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Анимация при скролле
     const observerOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
@@ -47,19 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Наблюдаем за секциями
     document.querySelectorAll('.levels-section, .rewards-section').forEach(
         section => observer.observe(section)
     );
 
-    // Обработка кнопок Learn More
     learnMoreButtons.forEach(button => {
         button.addEventListener('click', () => {
             const currentLevel = button.closest('.level');
             const currentInfo = currentLevel.querySelector('.additional-info');
             const isVisible = currentInfo.classList.contains('visible');
 
-            // Закрываем все открытые info блоки
             document.querySelectorAll('.level').forEach(level => {
                 if (level !== currentLevel) {
                     const info = level.querySelector('.additional-info');
@@ -70,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Переключаем текущий блок
             if (!isVisible) {
                 currentInfo.style.display = 'block';
                 setTimeout(() => currentInfo.classList.add('visible'), 10);

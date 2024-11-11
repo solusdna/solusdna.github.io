@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Инициализация переменных
+
     const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
     const navbar = document.querySelector('.navbar');
     const learnMoreButtons = document.querySelectorAll('.learn-more-button');
@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = document.querySelector('.close-modal');
     const rewardsSection = document.querySelector('.rewards-section');
 
-    // Данные для TaskBoard
     const categoryData = {
         explorers: {
             baseCPM: '1x',
@@ -45,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Плавная прокрутка для навигации
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -69,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Анимация при скролле
     const observerOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
@@ -89,19 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Наблюдаем за секциями
     document.querySelectorAll('.levels-section, .rewards-section, .taskboard-section').forEach(
         section => observer.observe(section)
     );
 
-    // Обработка нопок Learn More
     learnMoreButtons.forEach(button => {
         button.addEventListener('click', () => {
             const currentLevel = button.closest('.level');
             const currentInfo = currentLevel.querySelector('.additional-info');
             const isVisible = currentInfo.classList.contains('visible');
 
-            // Закрываем все открытые info блоки
             document.querySelectorAll('.level').forEach(level => {
                 if (level !== currentLevel) {
                     const info = level.querySelector('.additional-info');
@@ -112,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Переключаем текущий блок
             if (!isVisible) {
                 currentInfo.style.display = 'block';
                 setTimeout(() => currentInfo.classList.add('visible'), 10);
@@ -125,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Функция для модального окна
     function toggleModal() {
         if (modalOverlay) {
             modalOverlay.classList.toggle('visible');
@@ -133,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Добавляем обработчики для всех кнопок Apply Now
     showFormButtons.forEach(button => {
         button.addEventListener('click', toggleModal);
     });
@@ -148,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Обработка формы
+   
     const applicationForm = document.getElementById('applicationForm');
     if (applicationForm) {
         applicationForm.addEventListener('submit', async (e) => {
@@ -179,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Toast уведомления
+    
     function showToast(message) {
         const toast = document.createElement('div');
         toast.classList.add('toast');
@@ -193,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // Инициализация таблицы CPM
+    
     function initCPMTable() {
         const tableContent = document.querySelector('.table-content');
         const tabButtons = document.querySelectorAll('.tab-button');
@@ -207,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = categoryData[category];
             if (!data) return;
             
-            // Сначала удаляем старый контент с анимацией
+            
             if (tableContent.children.length) {
                 tableContent.children[0].style.opacity = '0';
                 tableContent.children[0].style.transform = 'translateY(10px)';
@@ -276,11 +267,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Инициализация с первой категорией
+        
         renderCategory('explorers');
     }
 
-    // Вызываем функцию после полной загрузки DOM
+    
     initCPMTable();
 
     const handleScroll = () => {
@@ -295,5 +286,5 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Инициализация при загрузке
+    handleScroll(); 
 });
