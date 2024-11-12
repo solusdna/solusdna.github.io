@@ -1,4 +1,9 @@
+import { i18n } from './i18n.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Добавляем перевод при загрузке страницы
+    i18n.translate();
+
     const navbar = document.querySelector('.navbar');
     const learnMoreButtons = document.querySelectorAll('.learn-more-button');
 
@@ -59,19 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     const btn = level.querySelector('.learn-more-button');
                     info.classList.remove('visible');
                     info.style.display = 'none';
-                    btn.textContent = 'Learn More';
+                    btn.setAttribute('data-i18n', 'levels.showMore');
+                    i18n.translate();
                 }
             });
 
             if (!isVisible) {
                 currentInfo.style.display = 'block';
                 setTimeout(() => currentInfo.classList.add('visible'), 10);
+                button.setAttribute('data-i18n', 'levels.showLess');
             } else {
                 currentInfo.classList.remove('visible');
                 setTimeout(() => currentInfo.style.display = 'none', 300);
+                button.setAttribute('data-i18n', 'levels.showMore');
             }
-
-            button.textContent = isVisible ? 'Learn More' : 'Show Less';
+            i18n.translate();
         });
     });
 });

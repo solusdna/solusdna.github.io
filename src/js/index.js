@@ -1,4 +1,9 @@
+import { i18n } from './i18n.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    i18n.translate();
+
     const roleCards = document.querySelectorAll('.role-card');
     const mainTitle = document.querySelector('.main-title');
     const description = document.querySelector('.description');
@@ -16,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 400 + (index * 200));
         });
     }
+
+    // Добавляем перевод при загрузке страницы
+    i18n.translate();
 
     const observerOptions = {
         threshold: 0.2,

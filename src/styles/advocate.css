@@ -459,8 +459,8 @@
 }
 
 .submit-button {
-    background: linear-gradient(135deg, #8EE96F 0%, #5CB350 100%);
-    color: #000;
+    background: linear-gradient(135deg, #9B5AEE 0%, #7251B5 100%);
+    color: #fff;
     border: none;
     border-radius: 12px;
     padding: 16px 32px;
@@ -1746,4 +1746,13 @@
     0% { transform: translate(0, 0) rotate(0deg); }
     50% { transform: translate(25px, -25px) rotate(180deg); }
     100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.lang-btn.active::before {
+    background: linear-gradient(135deg, #9B5AEE 0%, #7251B5 100%);
+    box-shadow: 0 2px 8px rgba(155, 90, 238, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+    color: #9B5AEE;
 }

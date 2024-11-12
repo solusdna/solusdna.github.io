@@ -17,14 +17,20 @@
                 <img src="../images/logo-white.png" alt="Storm Trade Logo">
                 Storm Trade <span class="white-text">Ambassadors</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="#rewards" class="nav-link">Rewards</a></li>
-                <li><a href="#levels" class="nav-link">Levels</a></li>
-                <li><a href="#steps" class="nav-link">Steps</a></li>
-                <li>
-                    <a href="https://zealy.io/c/stormtrade/questboard" class="nav-link" target="_blank">Join Now</a>
-                </li>
-            </ul>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#rewards" class="nav-link" data-i18n="nav.rewards">Rewards</a></li>
+                    <li><a href="#levels" class="nav-link" data-i18n="nav.levels">Levels</a></li>
+                    <li><a href="#steps" class="nav-link" data-i18n="nav.tasks">Tasks</a></li>
+                    <li><a href="https://zealy.io/c/stormtrade/questboard" class="nav-link" target="_blank" data-i18n="nav.joinNow">Join Now</a></li>
+                </ul>
+                <div class="language-selector">
+                    <div class="language-toggle">
+                        <button class="lang-btn" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ru">RU</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -33,14 +39,14 @@
             <div class="overview-content">
                 <h1 class="main-title">
                     Storm Trade<br>
-                    <span class="highlight-text">Advocates</span>
+                    <span class="highlight-text" data-i18n="roles.advocate.title">Advocates</span>
                 </h1>
                 <div class="description-wrapper">
                     <div class="main-description">
-                        <p>The Advocates Program was designed to promote awareness and foster a vibrant community around Storm Trade. This comprehensive initiative includes a structured framework with progress levels, tasks, and rewards, enhancing participant engagement and deepening their connection with the project.</p>
+                        <p data-i18n="roles.advocate.fullDescription">The Advocates Program was designed to promote awareness and foster a vibrant community around Storm Trade. This comprehensive initiative includes a structured framework with progress levels, tasks, and rewards, enhancing participant engagement and deepening their connection with the project.</p>
                     </div>
                     <div class="highlight-message">
-                        <p>If you are passionate about Storm Trade, actively engaged in trading, or create high-quality educational content, you are exactly who we are looking for.</p>
+                        <p data-i18n="roles.advocate.highlightMessage">If you are passionate about Storm Trade, actively engaged in trading, or create high-quality educational content, you are exactly who we are looking for.</p>
                     </div>
                 </div>
             </div>
@@ -54,9 +60,9 @@
 
         <section id="rewards" class="rewards-section">
             <div class="rewards-content">
-                <h2 class="section-title">Rewards for participation</h2>
+                <h2 class="section-title" data-i18n="rewards.title">Rewards for participation</h2>
                 <div class="rewards-description">
-                    <p>Advocates receive unique rewards for their contributions, including exclusive NFTs, access to private groups, and more. The rewards are designed to recognize and incentivize the hard work and dedication of our ambassadors.</p>
+                    <p data-i18n="rewards.description">Advocates receive unique rewards for their contributions, including exclusive NFTs, access to private groups, and more. The rewards are designed to recognize and incentivize the hard work and dedication of our ambassadors.</p>
                 </div>
                 <div class="rewards-cards">
                     <div class="reward-info-card">
@@ -64,7 +70,7 @@
                             <i class="fas fa-coins"></i>
                         </div>
                         <div class="reward-info-content">
-                            <p>After achieving the Sensei role, the Advocate is entitled to a reward in the form of $STORM tokens.</p>
+                            <p data-i18n="rewards.tokenReward">After achieving the Sensei role, the Advocate is entitled to a reward in the form of $STORM tokens.</p>
                         </div>
                     </div>
                     <div class="reward-info-card">
@@ -72,7 +78,7 @@
                             <i class="fas fa-calendar-check"></i>
                         </div>
                         <div class="reward-info-content">
-                            <p>Tokens will be distributed monthly based on monthly reports.</p>
+                            <p data-i18n="rewards.distribution">Tokens will be distributed monthly based on monthly reports.</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +87,8 @@
 
         <section id="levels" class="levels-section">
             <div class="levels-content">
-                <h2 class="section-title">Advocate Levels</h2>
-                <p class="levels-description">Each level is designed to guide participants on their journey, recognizing their growth and rewarding their dedication as they evolve from newcomers to key contributors shaping the future of Storm Trade.</p>
+                <h2 class="section-title" data-i18n="levels.advocate.title">Advocate Levels</h2>
+                <p class="levels-description" data-i18n="levels.advocate.description">Each level is designed to guide participants on their journey, recognizing their growth and rewarding their dedication as they evolve from newcomers to key contributors shaping the future of Storm Trade.</p>
                 
                 <div class="levels-container">
                     <div class="level" style="--order: 0">
@@ -91,24 +97,24 @@
                             <div class="level-image-overlay"></div>
                         </div>
                         <div class="level-content">
-                            <h2><i class="fas fa-graduation-cap"></i>Level 1: Student</h2>
-                            <p>Awarded upon joining the ambassador program, this title marks the beginning of a participant's journey, introducing them to key objectives, resources, and tasks.</p>
-                            <button class="learn-more-button">Learn More</button>
+                            <h2><i class="fas fa-graduation-cap"></i><span data-i18n="levels.student.title">Level 1: Student</span></h2>
+                            <p data-i18n="levels.student.description">Awarded upon joining the ambassador program, this title marks the beginning of a participant's journey, introducing them to key objectives, resources, and tasks.</p>
+                            <button class="learn-more-button" data-i18n="levels.learnMore">Learn More</button>
                             <div class="additional-info">
                                 <div class="info-section">
-                                    <h3><i class="fas fa-list"></i>Requirements</h3>
+                                    <h3><i class="fas fa-list"></i><span data-i18n="levels.requirements">Requirements</span></h3>
                                     <ul>
-                                        <li><a href="https://t.me/StormTradeBot?start" target="_blank">Join Storm Trade Bot</a></li>
-                                        <li><a href="https://zealy.io/cw/stormtradeadvocate/questboard/613e0dc7-6f53-4b08-8cf6-d83cc6d8e069" target="_blank">Complete the basic tasks in the Onboarding category on the Zealy platform</a></li>
-                                        <li>Demonstrate a clear understanding of the Storm Trade and its mission</li>
+                                        <li><a href="https://t.me/StormTradeBot?start" target="_blank" data-i18n="levels.student.req1">Join Storm Trade Bot</a></li>
+                                        <li><a href="https://zealy.io/cw/stormtradeadvocate/questboard/613e0dc7-6f53-4b08-8cf6-d83cc6d8e069" target="_blank" data-i18n="levels.student.req2">Complete the basic tasks in the Onboarding category on the Zealy platform</a></li>
+                                        <li data-i18n="levels.student.req3">Demonstrate a clear understanding of the Storm Trade and its mission</li>
                                     </ul>
                                 </div>
                                 
                                 <div class="info-section">
-                                    <h3><i class="fas fa-gift"></i>Benefits</h3>
+                                    <h3><i class="fas fa-gift"></i><span data-i18n="levels.benefits">Benefits</span></h3>
                                     <ul>
-                                        <li>Opportunity to join closed Advocates Telegram chat</li>
-                                        <li>Further participation in the Advocates Program</li>
+                                        <li data-i18n="levels.student.benefit1">Opportunity to join closed Advocates Telegram chat</li>
+                                        <li data-i18n="levels.student.benefit2">Further participation in the Advocates Program</li>
                                     </ul>
                                 </div>
                             </div>
@@ -121,23 +127,23 @@
                             <div class="level-image-overlay"></div>
                         </div>
                         <div class="level-content">
-                            <h2><i class="fas fa-crown"></i>Level 2: Master</h2>
-                            <p>Masters actively complete tasks, deepen their knowledge, and build connections with peers, focusing on skill development and community engagement.</p>
-                            <button class="learn-more-button">Learn More</button>
+                            <h2><i class="fas fa-crown"></i><span data-i18n="levels.master.title">Level 2: Master</span></h2>
+                            <p data-i18n="levels.master.description">Masters actively complete tasks, deepen their knowledge, and build connections with peers, focusing on skill development and community engagement.</p>
+                            <button class="learn-more-button" data-i18n="levels.learnMore">Learn More</button>
                             <div class="additional-info">
                                 <div class="info-section">
-                                    <h3><i class="fas fa-list"></i>Requirements</h3>
+                                    <h3><i class="fas fa-list"></i><span data-i18n="levels.requirements">Requirements</span></h3>
                                     <ul>
-                                        <li>Actively completes tasks and accumulates points</li>
-                                        <li>When you feel ready, fill out the form to upgrade your level</li>
+                                        <li data-i18n="levels.master.req1">Actively completes tasks and accumulates points</li>
+                                        <li data-i18n="levels.master.req2">When you feel ready, fill out the form to upgrade your level</li>
                                     </ul>
                                 </div>
                                 
                                 <div class="info-section">
-                                    <h3><i class="fas fa-gift"></i>Benefits</h3>
+                                    <h3><i class="fas fa-gift"></i><span data-i18n="levels.benefits">Benefits</span></h3>
                                     <ul>
-                                        <li>Unique role on Advocates Telegram chat</li>
-                                        <li>Ability to earn Points and Rewards for Situational tasks</li>
+                                        <li data-i18n="levels.master.benefit1">Unique role on Advocates Telegram chat</li>
+                                        <li data-i18n="levels.master.benefit2">Ability to earn Points and Rewards for Situational tasks</li>
                                     </ul>
                                 </div>
                             </div>
@@ -150,24 +156,24 @@
                             <div class="level-image-overlay"></div>
                         </div>
                         <div class="level-content">
-                            <h2><i class="fas fa-chess-knight"></i>Level 3: Sensei</h2>
-                            <p>Having earned recognition in the community for their contributions, Senseis guide others with their expertise and foster a positive community environment.</p>
-                            <button class="learn-more-button">Learn More</button>
+                            <h2><i class="fas fa-chess-knight"></i><span data-i18n="levels.sensei.title">Level 3: Sensei</span></h2>
+                            <p data-i18n="levels.sensei.description">Having earned recognition in the community for their contributions, Senseis guide others with their expertise and foster a positive community environment.</p>
+                            <button class="learn-more-button" data-i18n="levels.learnMore">Learn More</button>
                             <div class="additional-info">
                                 <div class="info-section">
-                                    <h3><i class="fas fa-list"></i>Requirements</h3>
+                                    <h3><i class="fas fa-list"></i><span data-i18n="levels.requirements">Requirements</span></h3>
                                     <ul>
-                                        <li>Consistently complete high-quality tasks from the task board</li>
-                                        <li>Complete at least 25 pieces of content in Master role within 4 weeks</li>
-                                        <li>The percentage of successfully completed tasks is at least 80%</li>
+                                        <li data-i18n="levels.sensei.req1">Consistently complete high-quality tasks from the task board</li>
+                                        <li data-i18n="levels.sensei.req2">Complete at least 25 pieces of content in Master role within 4 weeks</li>
+                                        <li data-i18n="levels.sensei.req3">The percentage of successfully completed tasks is at least 80%</li>
                                     </ul>
                                 </div>
                                 
                                 <div class="info-section">
-                                    <h3><i class="fas fa-gift"></i>Benefits</h3>
+                                    <h3><i class="fas fa-gift"></i><span data-i18n="levels.benefits">Benefits</span></h3>
                                     <ul>
-                                        <li>Opportunity to earn rewards for your contributions as an official Storm Trade ambassador</li>
-                                        <li>Unique role on Storm Trade community</li>
+                                        <li data-i18n="levels.sensei.benefit1">Opportunity to earn rewards for your contributions as an official Storm Trade ambassador</li>
+                                        <li data-i18n="levels.sensei.benefit2">Unique role on Storm Trade community</li>
                                     </ul>
                                 </div>
                             </div>
@@ -180,24 +186,24 @@
                             <div class="level-image-overlay"></div>
                         </div>
                         <div class="level-content">
-                            <h2><i class="fas fa-chess-king"></i>Level 4: Grandmaster</h2>
-                            <p>The highest role, achieved by ambassadors who exemplify leadership, commitment, and significant influence, serving as role models within the community.</p>
-                            <button class="learn-more-button">Learn More</button>
+                            <h2><i class="fas fa-chess-king"></i><span data-i18n="levels.grandmaster.title">Level 4: Grandmaster</span></h2>
+                            <p data-i18n="levels.grandmaster.description">The highest role, achieved by ambassadors who exemplify leadership, commitment, and significant influence, serving as role models within the community.</p>
+                            <button class="learn-more-button" data-i18n="levels.learnMore">Learn More</button>
                             <div class="additional-info">
                                 <div class="info-section">
-                                    <h3><i class="fas fa-list"></i>Requirements</h3>
+                                    <h3><i class="fas fa-list"></i><span data-i18n="levels.requirements">Requirements</span></h3>
                                     <ul>
-                                        <li>Be in an Sensei position for at least 2 month</li>
-                                        <li>Provide mentorship and guidance to other ambassadors</li>
-                                        <li>The percentage of successfully completed tasks is at least 85%</li>
+                                        <li data-i18n="levels.grandmaster.req1">Be in an Sensei position for at least 2 month</li>
+                                        <li data-i18n="levels.grandmaster.req2">Provide mentorship and guidance to other ambassadors</li>
+                                        <li data-i18n="levels.grandmaster.req3">The percentage of successfully completed tasks is at least 85%</li>
                                     </ul>
                                 </div>
                                 
                                 <div class="info-section">
-                                    <h3><i class="fas fa-gift"></i>Benefits</h3>
+                                    <h3><i class="fas fa-gift"></i><span data-i18n="levels.benefits">Benefits</span></h3>
                                     <ul>
-                                        <li>Access personalized and customized assignments for rewards</li>
-                                        <li>Unique role on Storm Trade community</li>
+                                        <li data-i18n="levels.grandmaster.benefit1">Access personalized and customized assignments for rewards</li>
+                                        <li data-i18n="levels.grandmaster.benefit2">Unique role on Storm Trade community</li>
                                     </ul>
                                 </div>
                             </div>
@@ -209,8 +215,8 @@
 
         <section id="steps" class="steps-section">
             <div class="steps-content">
-                <h2 class="section-title">Steps to Get Started</h2>
-                <p class="steps-description">Follow these simple steps to begin your journey as a Storm Trade Advocate</p>
+                <h2 class="section-title" data-i18n="steps.title">Steps to Get Started</h2>
+                <p class="steps-description" data-i18n="steps.description">Follow these simple steps to begin your journey as a Storm Trade Advocate</p>
                 
                 <div class="steps-container">
                     <div class="step-card" style="--order: 0">
@@ -219,11 +225,11 @@
                             <span>1</span>
                         </div>
                         <div class="step-content">
-                            <h3>Complete Basic Tasks</h3>
-                            <p>Start your journey by completing the basic tasks in the Onboarding category on Zealy</p>
+                            <h3 data-i18n="steps.step1.title">Complete Basic Tasks</h3>
+                            <p data-i18n="steps.step1.description">Start your journey by completing the basic tasks in the Onboarding category on Zealy</p>
                             <a href="https://zealy.io/c/stormtrade/questboard" class="step-button" target="_blank">
                                 <i class="fas fa-external-link-alt"></i>
-                                Join Now
+                                <span data-i18n="nav.joinNow">Join Now</span>
                             </a>
                         </div>
                     </div>
@@ -234,8 +240,8 @@
                             <span>2</span>
                         </div>
                         <div class="step-content">
-                            <h3>Level Up</h3>
-                            <p>Upon reaching Level 2: Master, prepare for the next opportunity to level up when it is announced</p>
+                            <h3 data-i18n="steps.step2.title">Level Up</h3>
+                            <p data-i18n="steps.step2.description">Upon reaching Level 2: Master, prepare for the next opportunity to level up when it is announced</p>
                         </div>
                     </div>
 
@@ -245,8 +251,8 @@
                             <span>3</span>
                         </div>
                         <div class="step-content">
-                            <h3>Earn Rewards</h3>
-                            <p>Complete special tasks in Zealy to level up and earn exclusive rewards</p>
+                            <h3 data-i18n="steps.step3.title">Earn Rewards</h3>
+                            <p data-i18n="steps.step3.description">Complete special tasks in Zealy to level up and earn exclusive rewards</p>
                         </div>
                     </div>
                 </div>
@@ -259,42 +265,42 @@
                 <img src="../images/logo-black.png" alt="Storm Logo" class="floating-logo logo2">
                 <img src="../images/logo-black.png" alt="Storm Logo" class="floating-logo logo3">
             </div>
-            <h2>Ready to Start Your Journey?</h2>
-            <p>Join Storm Trade Advocates and become part of our growing community</p>
+            <h2 data-i18n="finalCta.title">Ready to Start Your Journey?</h2>
+            <p data-i18n="finalCta.description">Join Storm Trade Advocates and become part of our growing community</p>
             <a href="https://zealy.io/c/stormtrade/questboard" class="cta-button" target="_blank">
                 <i class="fas fa-rocket"></i>
-                Join Now
+                <span data-i18n="nav.joinNow">Join Now</span>
             </a>
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About</h3>
+                <h3 data-i18n="footer.about.title">About</h3>
                 <ul>
-                    <li><a href="https://storm.tg/" target="_blank">Storm Trade Website</a></li>
-                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank">What is Storm</a></li>
-                    <li><a href="https://storm.tg/terms_of_use.pdf" target="_blank">Terms and Conditions</a></li>
-                    <li><a href="https://certificate.quantstamp.com/full/storm-trade/21e4074a-b2cb-409d-b5df-48f683d0e8f3/index.html" target="_blank">Audit Smart Contract</a></li>
+                    <li><a href="https://storm.tg/" target="_blank" data-i18n="footer.about.website">Storm Trade Website</a></li>
+                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank" data-i18n="footer.about.whatIs">What is Storm</a></li>
+                    <li><a href="https://storm.tg/terms_of_use.pdf" target="_blank" data-i18n="footer.about.terms">Terms and Conditions</a></li>
+                    <li><a href="https://certificate.quantstamp.com/full/storm-trade/21e4074a-b2cb-409d-b5df-48f683d0e8f3/index.html" target="_blank" data-i18n="footer.about.audit">Audit Smart Contract</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Products</h3>
+                <h3 data-i18n="footer.products.title">Products</h3>
                 <ul>
-                    <li><a href="https://app.storm.tg/trade/TON_USDT" target="_blank">Trading App</a></li>
-                    <li><a href="https://app.storm.tg/vault/NOT" target="_blank">Earn</a></li>
+                    <li><a href="https://app.storm.tg/trade/TON_USDT" target="_blank" data-i18n="footer.products.trading">Trading App</a></li>
+                    <li><a href="https://app.storm.tg/vault/NOT" target="_blank" data-i18n="footer.products.earn">Earn</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Docs</h3>
+                <h3 data-i18n="footer.docs.title">Docs</h3>
                 <ul>
-                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank">Blog</a></li>
-                    <li><a href="https://docs.storm.tg/" target="_blank">Documentation</a></li>
+                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank" data-i18n="footer.docs.blog">Blog</a></li>
+                    <li><a href="https://docs.storm.tg/" target="_blank" data-i18n="footer.docs.documentation">Documentation</a></li>
                 </ul>
             </div>
-            <div class="footer-section social">
-                <h3>Join our community</h3>
+            <div class="footer-section">
+                <h3 data-i18n="footer.community.title">Join our community</h3>
                 <div class="social-links">
                     <a href="https://x.com/storm_trade_ton" target="_blank" class="social-link">
                         <svg class="social-icon" viewBox="0 0 24 24">
@@ -311,7 +317,8 @@
         </div>
     </footer>
 
-    <script src="../js/advocate.js"></script>
-    <script src="../js/transition.js"></script>
+    <script type="module" src="../js/i18n.js"></script>
+    <script type="module" src="../js/advocate.js"></script>
+    <script type="module" src="../js/transition.js"></script>
 </body>
 </html>

@@ -17,12 +17,20 @@
                 <img src="../images/logo-white.png" alt="Storm Trade Logo">
                 Storm Trade <span class="white-text">Ambassadors</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="#rewards" class="nav-link">Rewards</a></li>
-                <li><a href="#levels" class="nav-link">Levels</a></li>
-                <li><a href="#taskboard" class="nav-link">Tasks</a></li>
-                <li><a href="#" class="nav-link" onclick="toggleModal(); return false;">Apply Now</a></li>
-            </ul>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#rewards" class="nav-link" data-i18n="nav.rewards">Rewards</a></li>
+                    <li><a href="#levels" class="nav-link" data-i18n="nav.levels">Levels</a></li>
+                    <li><a href="#taskboard" class="nav-link" data-i18n="nav.tasks">Tasks</a></li>
+                    <li><a href="#" class="nav-link" onclick="toggleModal(); return false;" data-i18n="nav.applyNow">Apply Now</a></li>
+                </ul>
+                <div class="language-selector">
+                    <div class="language-toggle">
+                        <button class="lang-btn" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ru">RU</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -31,14 +39,14 @@
             <div class="overview-content">
                 <h1 class="main-title">
                     Storm Trade<br>
-                    <span class="highlight-text">Influencers</span>
+                    <span class="highlight-text" data-i18n="roles.influencer.title">Influencers</span>
                 </h1>
                 <div class="description-wrapper">
                     <div class="main-description">
-                        <p>Storm Trade Influencers are the catalysts who help others dive into the world of trading with our platform. You attract new traders, share your recommendations, and show why Storm Trade is the ultimate tool for success.</p>
+                        <p data-i18n="roles.influencer.fullDescription">Storm Trade Influencers are the catalysts who help others dive into the world of trading with our platform. You attract new traders, share your recommendations, and show why Storm Trade is the ultimate tool for success.</p>
                     </div>
                     <div class="highlight-message">
-                        <p>Simply share, teach, and inspire — and earn amazing rewards and well-deserved recognition along the way.</p>
+                        <p data-i18n="roles.influencer.highlightMessage">Simply share, teach, and inspire — and earn amazing rewards and well-deserved recognition along the way.</p>
                     </div>
                 </div>
             </div>
@@ -52,35 +60,35 @@
 
         <section id="rewards" class="rewards-section">
             <div class="rewards-content">
-                <h2 class="section-title">Rewards for participation</h2>
+                <h2 class="section-title" data-i18n="rewards.title">Rewards for participation</h2>
                 <div class="rewards-container">
                     <div class="rewards-description">
-                        <p>Influencers receive unique rewards for their contributions, including exclusive NFTs, access to private groups, and more. The rewards are designed to recognize and incentivize the hard work and dedication of our ambassadors.</p>
+                        <p data-i18n="rewards.influencer.description">Influencers receive unique rewards for their contributions, including exclusive NFTs, access to private groups, and more. The rewards are designed to recognize and incentivize the hard work and dedication of our ambassadors.</p>
                     </div>
                     <div class="rewards-grid">
                         <div class="reward-card">
                             <div class="reward-icon">
                                 <i class="fas fa-users-rectangle"></i>
                             </div>
-                            <h3>Access to private MarketMakers group</h3>
+                            <h3 data-i18n="rewards.influencer.privateGroup">Access to private MarketMakers group</h3>
                         </div>
                         <div class="reward-card">
                             <div class="reward-icon">
                                 <i class="fas fa-coins"></i>
                             </div>
-                            <h3>$STORM Tokens</h3>
+                            <h3 data-i18n="rewards.influencer.tokens">$STORM Tokens</h3>
                         </div>
                         <div class="reward-card">
                             <div class="reward-icon">
                                 <i class="fas fa-certificate"></i>
                             </div>
-                            <h3>Exclusive NFTs</h3>
+                            <h3 data-i18n="rewards.influencer.nfts">Exclusive NFTs</h3>
                         </div>
                         <div class="reward-card">
                             <div class="reward-icon">
                                 <i class="fas fa-ellipsis"></i>
                             </div>
-                            <h3>And much more</h3>
+                            <h3 data-i18n="rewards.influencer.more">And much more</h3>
                         </div>
                     </div>
                 </div>
@@ -89,122 +97,119 @@
 
         <section id="levels" class="levels-section">
             <div class="levels-content">
-                <h2 class="section-title">Influencer Levels</h2>
-                <p class="levels-description">Each level is designed to guide participants on their journey, recognizing their growth and rewarding their dedication as they evolve from newcomers to key contributors shaping the future of Storm Trade.</p>
+                <h2 class="section-title" data-i18n="levels.influencer.title">Influencer Levels</h2>
+                <p class="levels-description" data-i18n="levels.influencer.description">Each level is designed to guide participants on their journey, recognizing their growth and rewarding their dedication as they evolve from newcomers to key contributors shaping the future of Storm Trade.</p>
                 
                 <div class="levels-container">
-                    <div class="level" style="--order: 0">
+                    <!-- Explorer Level -->
+                    <div class="level">
                         <div class="level-image-wrapper">
                             <img src="../images/explorer-level.png" alt="Explorer Level" class="level-image">
                             <div class="level-image-overlay"></div>
                         </div>
                         <div class="level-content">
-                            <h2><i class="fas fa-compass"></i>Level 1: Explorer</h2>
-                            <p>Explorers are new members who are just beginning their journey with StormTrade. <br> This level is open to all willing users who have an own audience and followers and wish to join the program.</p>
-                            <button class="learn-more-button">Learn More</button>
+                            <h2><i class="fas fa-compass"></i><span data-i18n="levels.explorer.title">Level 1: Explorer</span></h2>
+                            <p data-i18n="levels.explorer.description">Explorers are new members who are just beginning their journey with StormTrade.</p>
+                            <button class="learn-more-button" data-i18n="levels.showMore">Learn More</button>
                             <div class="additional-info">
                                 <div class="info-section">
-                                    <h3><i class="fas fa-list"></i>Requirements</h3>
+                                    <h3><i class="fas fa-list"></i><span data-i18n="levels.requirements">Requirements</span></h3>
                                     <ul>
-                                        <li>Have a community or audience on various social networks</li>
-                                        <li>Fill out the form</li>
+                                        <li data-i18n="levels.explorer.req1">Have a community or audience on various social networks</li>
+                                        <li data-i18n="levels.explorer.req2">Fill out the form</li>
                                     </ul>
                                 </div>
-                                
                                 <div class="info-section">
-                                    <h3><i class="fas fa-tasks"></i>Main Tasks</h3>
+                                    <h3><i class="fas fa-tasks"></i><span data-i18n="levels.tasks">Main Tasks</span></h3>
                                     <ul>
-                                        <li>Create and share user-generated content on social media</li>
-                                        <li>Spread awareness about Storm Trade</li>
+                                        <li data-i18n="levels.explorer.task1">Create and share user-generated content on social media</li>
+                                        <li data-i18n="levels.explorer.task2">Spread awareness about Storm Trade</li>
                                     </ul>
                                 </div>
-                                
                                 <div class="info-section">
-                                    <h3><i class="fas fa-gift"></i>Benefits</h3>
+                                    <h3><i class="fas fa-gift"></i><span data-i18n="levels.benefits">Benefits</span></h3>
                                     <ul>
-                                        <li>CPM rate of x1</li>
-                                        <li>Limited access to Discord and Telegram channels</li>
-                                        <li>Opportunity to grow within the program</li>
+                                        <li data-i18n="levels.explorer.benefit1">CPM rate of x1</li>
+                                        <li data-i18n="levels.explorer.benefit2">Limited access to Discord and Telegram channels</li>
+                                        <li data-i18n="levels.explorer.benefit3">Opportunity to grow within the program</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="level" style="--order: 1">
+                    <!-- Connector Level -->
+                    <div class="level">
                         <div class="level-image-wrapper">
                             <img src="../images/connector-level.png" alt="Connector Level" class="level-image">
                             <div class="level-image-overlay"></div>
                         </div>
                         <div class="level-content">
-                            <h2><i class="fas fa-link"></i>Level 2: Connector</h2>
-                            <p>Сonnectors are participants who have demonstrated consistent engagement and activity. They are actively involved in tasks and begin to take on a more significant role in the program.</p>
-                            <button class="learn-more-button">Learn More</button>
+                            <h2><i class="fas fa-link"></i><span data-i18n="levels.connector.title">Level 2: Connector</span></h2>
+                            <p data-i18n="levels.connector.description">Connectors are participants who have demonstrated consistent engagement and activity.</p>
+                            <button class="learn-more-button" data-i18n="levels.showMore">Learn More</button>
                             <div class="additional-info">
                                 <div class="info-section">
-                                    <h3><i class="fas fa-list"></i>Requirements</h3>
+                                    <h3><i class="fas fa-list"></i><span data-i18n="levels.requirements">Requirements</span></h3>
                                     <ul>
-                                        <li>Create a minimum of 5 content units with a CPM Ratio of at least 85%</li>
-                                        <li>Invite at least 7 users to the Storm Trade platform or Ambassador Program who have reached level 2</li>
-                                        <li>Rank in the top 10 of the leaderboard</li>
+                                        <li data-i18n="levels.connector.req1">Create a minimum of 5 content units with a CPM Ratio of at least 85%</li>
+                                        <li data-i18n="levels.connector.req2">Invite at least 7 users to the Storm Trade platform</li>
+                                        <li data-i18n="levels.connector.req3">Rank in the top 10 of the leaderboard</li>
                                     </ul>
                                 </div>
-                                
                                 <div class="info-section">
-                                    <h3><i class="fas fa-tasks"></i>Main Tasks</h3>
+                                    <h3><i class="fas fa-tasks"></i><span data-i18n="levels.tasks">Main Tasks</span></h3>
                                     <ul>
-                                        <li>Create in-depth analysis and posts</li>
-                                        <li>Provide feedback on program features</li>
-                                        <li>Invite other users to join the StormTrade platform or Ambassador Program</li>
+                                        <li data-i18n="levels.connector.task1">Create in-depth analysis and posts</li>
+                                        <li data-i18n="levels.connector.task2">Provide feedback on program features</li>
+                                        <li data-i18n="levels.connector.task3">Invite other users to join Storm Trade</li>
                                     </ul>
                                 </div>
-                                
                                 <div class="info-section">
-                                    <h3><i class="fas fa-gift"></i>Benefits</h3>
+                                    <h3><i class="fas fa-gift"></i><span data-i18n="levels.benefits">Benefits</span></h3>
                                     <ul>
-                                        <li>CPM rate of x2</li>
-                                        <li>Exclusive Connectors events</li>
-                                        <li>Exclusive Connectors rewards and benefits</li>
+                                        <li data-i18n="levels.connector.benefit1">CPM rate of x2</li>
+                                        <li data-i18n="levels.connector.benefit2">Exclusive Connectors events</li>
+                                        <li data-i18n="levels.connector.benefit3">Exclusive Connectors rewards</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="level" style="--order: 2">
+                    <!-- Mastermind Level -->
+                    <div class="level">
                         <div class="level-image-wrapper">
                             <img src="../images/mastermind-level.png" alt="Mastermind Level" class="level-image">
                             <div class="level-image-overlay"></div>
                         </div>
                         <div class="level-content">
-                            <h2><i class="fas fa-brain"></i>Level 3: Mastermind</h2>
-                            <p>Masterminds are the core members of the program who have shown dedication and a deep understanding of StormTrade's vision and Ambassador Program.</p>
-                            <button class="learn-more-button">Learn More</button>
+                            <h2><i class="fas fa-brain"></i><span data-i18n="levels.mastermind.title">Level 3: Mastermind</span></h2>
+                            <p data-i18n="levels.mastermind.description">Masterminds are the core members who have shown dedication and deep understanding.</p>
+                            <button class="learn-more-button" data-i18n="levels.showMore">Learn More</button>
                             <div class="additional-info">
                                 <div class="info-section">
-                                    <h3><i class="fas fa-list"></i>Requirements</h3>
+                                    <h3><i class="fas fa-list"></i><span data-i18n="levels.requirements">Requirements</span></h3>
                                     <ul>
-                                        <li>Create a minimum of 12 content units with a CPM Ratio of at least 85%</li>
-                                        <li>Invite at least 15 users to the Storm Trade platform</li>
-                                        <li>Rank in the top 5 of the leaderboard</li>
+                                        <li data-i18n="levels.mastermind.req1">Create a minimum of 12 content units with a CPM Ratio of at least 85%</li>
+                                        <li data-i18n="levels.mastermind.req2">Invite at least 15 users to Storm Trade</li>
+                                        <li data-i18n="levels.mastermind.req3">Rank in the top 5 of the leaderboard</li>
                                     </ul>
                                 </div>
-                                
                                 <div class="info-section">
-                                    <h3><i class="fas fa-tasks"></i>Main Tasks</h3>
+                                    <h3><i class="fas fa-tasks"></i><span data-i18n="levels.tasks">Main Tasks</span></h3>
                                     <ul>
-                                        <li>Develop and lead marketing campaigns</li>
-                                        <li>Represent Storm Trade ambassadors at local events</li>
-                                        <li>Mentor new participants</li>
+                                        <li data-i18n="levels.mastermind.task1">Develop and lead marketing campaigns</li>
+                                        <li data-i18n="levels.mastermind.task2">Represent Storm Trade at local events</li>
+                                        <li data-i18n="levels.mastermind.task3">Mentor new participants</li>
                                     </ul>
                                 </div>
-                                
                                 <div class="info-section">
-                                    <h3><i class="fas fa-gift"></i>Benefits</h3>
+                                    <h3><i class="fas fa-gift"></i><span data-i18n="levels.benefits">Benefits</span></h3>
                                     <ul>
-                                        <li>Highest CPM rates at x3.2</li>
-                                        <li>Access to MarketMakers closed community</li>
-                                        <li>Exclusive ambassador access and rewards</li>
+                                        <li data-i18n="levels.mastermind.benefit1">Highest CPM rates at x3.2</li>
+                                        <li data-i18n="levels.mastermind.benefit2">Access to MarketMakers closed community</li>
+                                        <li data-i18n="levels.mastermind.benefit3">Exclusive ambassador rewards</li>
                                     </ul>
                                 </div>
                             </div>
@@ -215,8 +220,8 @@
         </section>
 
         <section id="taskboard" class="taskboard-section">
-            <h2 class="section-title taskboard-title">Tasks and Evaluation</h2>
-            <p class="taskboard-description">
+            <h2 class="section-title taskboard-title" data-i18n="taskboard.title">Tasks and Evaluation</h2>
+            <p class="taskboard-description" data-i18n="taskboard.description">
                 Influencers are evaluated based on the content they have created on various platforms (e.g. X, Telegram, YouTube) as well as the number of users they have attracted through their personal referral link.
             </p>
             
@@ -225,16 +230,16 @@
                     <div class="info-card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>What is CPM?</h3>
-                    <p>CPM - (cost per mile) is a pricing model and metric commonly used in marketing and advertising. Also called cost per thousand impressions. In Storm Trade Ambassador Program CPM refers to the total rewards for every 1,000 impressions a content piece receives.</p>
+                    <h3 data-i18n="taskboard.cpm.title">What is CPM?</h3>
+                    <p data-i18n="taskboard.cpm.description">CPM - (cost per mile) is a pricing model and metric commonly used in marketing and advertising. Also called cost per thousand impressions. In Storm Trade Ambassador Program CPM refers to the total rewards for every 1,000 impressions a content piece receives.</p>
                 </div>
                 
                 <div class="info-card">
                     <div class="info-card-icon">
                         <i class="fas fa-percentage"></i>
                     </div>
-                    <h3>CPM Ratio</h3>
-                    <p>This ratio reflects the multiplier applied to your base CPM rate for each content category. The more impactful or challenging the content type, the higher the CPM ratio, resulting in greater rewards for creating higher-quality or more strategic content.</p>
+                    <h3 data-i18n="taskboard.cpmRatio.title">CPM Ratio</h3>
+                    <p data-i18n="taskboard.cpmRatio.description">This ratio reflects the multiplier applied to your base CPM rate for each content category. The more impactful or challenging the content type, the higher the CPM ratio, resulting in greater rewards for creating higher-quality or more strategic content.</p>
                 </div>
             </div>
 
@@ -255,9 +260,9 @@
                 
                 <div class="cpm-table">
                     <div class="table-header">
-                        <div>Base CPM</div>
-                        <div>Available Content Category</div>
-                        <div>Platforms</div>
+                        <div data-i18n="taskboard.table.baseCpm">Base CPM</div>
+                        <div data-i18n="taskboard.table.contentCategory">Available Content Category</div>
+                        <div data-i18n="taskboard.table.platforms">Platforms</div>
                     </div>
                     <div class="table-content"></div>
                 </div>
@@ -266,9 +271,9 @@
 
         <section class="final-cta">
             <div class="final-cta-content">
-                <h2>BECOME A STORM TRADE INFLUENCER TODAY!</h2>
-                <p>Step into a world of opportunities, exclusive rewards, and the chance to shape the future of decentralized trading. Your contributions make a real difference, and there's no better time to start than now.</p>
-                <button class="cta-button showFormButton" id="finalCtaButton">Apply Now</button>
+                <h2 data-i18n="finalCta.influencer.title">BECOME A STORM TRADE INFLUENCER TODAY!</h2>
+                <p data-i18n="finalCta.influencer.description">Step into a world of opportunities, exclusive rewards, and the chance to shape the future of decentralized trading. Your contributions make a real difference, and there's no better time to start than now.</p>
+                <button class="cta-button showFormButton" id="finalCtaButton" data-i18n="nav.applyNow">Apply Now</button>
             </div>
         </section>
     </main>
@@ -278,20 +283,20 @@
         <div class="modal-content">
             <div class="modal-inner">
                 <button class="close-modal">&times;</button>
-                <h2>Apply to become a Storm Trade Influencer</h2>
+                <h2 data-i18n="modal.title">Apply to become a Storm Trade Influencer</h2>
                 <form id="applicationForm" class="application-form">
                     <div class="form-group">
-                        <label for="userEmail">Email address*</label>
+                        <label for="userEmail" data-i18n="modal.email">Email address*</label>
                         <input type="email" id="userEmail" name="email" required autocomplete="email">
                     </div>
                     
                     <div class="form-group">
-                        <label for="userName">Full Name*</label>
+                        <label for="userName" data-i18n="modal.fullName">Full Name*</label>
                         <input type="text" id="userName" name="fullName" required autocomplete="name">
                     </div>
                     
                     <div class="form-group">
-                        <label for="location">Where are you located?*</label>
+                        <label for="location" data-i18n="modal.location">Where are you located?*</label>
                         <input type="text" id="location" name="location" required>
                     </div>
                     
@@ -324,39 +329,39 @@
                         <textarea id="additionalInfo" name="additionalInfo"></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-button">Submit Application</button>
+                    <button type="submit" class="submit-button" data-i18n="modal.submit">Submit Application</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <footer class="main-footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About</h3>
+                <h3 data-i18n="footer.about.title">About</h3>
                 <ul>
-                    <li><a href="https://storm.tg/" target="_blank">Storm Trade Website</a></li>
-                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank">What is Storm</a></li>
-                    <li><a href="https://storm.tg/terms_of_use.pdf" target="_blank">Terms and Conditions</a></li>
-                    <li><a href="https://certificate.quantstamp.com/full/storm-trade/21e4074a-b2cb-409d-b5df-48f683d0e8f3/index.html" target="_blank">Audit Smart Contract</a></li>
+                    <li><a href="#" data-i18n="footer.about.website">Storm Trade Website</a></li>
+                    <li><a href="#" data-i18n="footer.about.whatIs">What is Storm</a></li>
+                    <li><a href="#" data-i18n="footer.about.terms">Terms and Conditions</a></li>
+                    <li><a href="#" data-i18n="footer.about.audit">Audit Smart Contract</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Products</h3>
+                <h3 data-i18n="footer.products.title">Products</h3>
                 <ul>
-                    <li><a href="https://app.storm.tg/trade/TON_USDT" target="_blank">Trading App</a></li>
-                    <li><a href="https://app.storm.tg/vault/NOT" target="_blank">Earn</a></li>
+                    <li><a href="#" data-i18n="footer.products.trading">Trading App</a></li>
+                    <li><a href="#" data-i18n="footer.products.earn">Earn</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Docs</h3>
+                <h3 data-i18n="footer.docs.title">Docs</h3>
                 <ul>
-                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank">Blog</a></li>
-                    <li><a href="https://docs.storm.tg/" target="_blank">Documentation</a></li>
+                    <li><a href="#" data-i18n="footer.docs.blog">Blog</a></li>
+                    <li><a href="#" data-i18n="footer.docs.documentation">Documentation</a></li>
                 </ul>
             </div>
-            <div class="footer-section social">
-                <h3>Join our community</h3>
+            <div class="footer-section">
+                <h3 data-i18n="footer.community.title">Join our community</h3>
                 <div class="social-links">
                     <a href="https://x.com/storm_trade_ton" target="_blank" class="social-link">
                         <svg class="social-icon" viewBox="0 0 24 24">
@@ -373,7 +378,8 @@
         </div>
     </footer>
 
-    <script src="../js/influencer.js"></script>
-    <script src="../js/transition.js"></script>
+    <script type="module" src="../js/i18n.js"></script>
+    <script type="module" src="../js/influencer.js"></script>
+    <script type="module" src="../js/transition.js"></script>
 </body>
 </html>

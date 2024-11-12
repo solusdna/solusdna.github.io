@@ -1,6 +1,10 @@
+import { i18n } from './i18n.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
 
+    // Добавляем перевод при загрузке страницы
+    i18n.translate();
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -12,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    
     document.querySelector('.welcome-section').style.opacity = '0';
     setTimeout(() => {
         document.querySelector('.welcome-section').style.transition = 'opacity 0.8s ease-out';

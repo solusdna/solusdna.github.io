@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dark-theme">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-logo">
+                <img src="src/images/logo-white.png" alt="Storm Trade Logo">
+                Storm Trade <span class="white-text">Ambassadors</span>
+            </a>
+            <div class="nav-menu">
+                <div class="language-selector">
+                    <div class="language-toggle">
+                        <button class="lang-btn" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ru">RU</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <div class="welcome-container">
             <header class="welcome-section">
@@ -19,36 +35,36 @@
                 </div>
                 <div class="header-content">
                     <h1 class="main-title">
-                        <span class="title-line">WELCOME TO</span>
+                        <span class="title-line" data-i18n="welcome.title">WELCOME TO</span>
                         <span class="highlight">STORM&nbsp;TRADE</span>
-                        <span class="title-line">AMBASSADOR PROGRAM</span>
+                        <span class="title-line" data-i18n="welcome.program">AMBASSADOR PROGRAM</span>
                     </h1>
                     <div class="hero-description">
-                        <p class="description">Join Storm Trade Ambassador Program and unlock exclusive opportunities in the world of decentralized trading</p>
+                        <p class="description" data-i18n="welcome.description">Join Storm Trade Ambassador Program and unlock exclusive opportunities in the world of decentralized trading</p>
                         
                         <div class="benefits-grid">
                             <div class="benefit-card" data-category="exclusive">
                                 <div class="benefit-icon">
                                     <i class="fas fa-gem"></i>
                                 </div>
-                                <h3>Exclusive Access</h3>
-                                <p>Private team channels and closed community events</p>
+                                <h3 data-i18n="welcome.benefits.exclusive.title">Exclusive Access</h3>
+                                <p data-i18n="welcome.benefits.exclusive.description">Private team channels and closed community events</p>
                             </div>
                             
                             <div class="benefit-card" data-category="rewards">
                                 <div class="benefit-icon">
                                     <i class="fas fa-gift"></i>
                                 </div>
-                                <h3>Premium Benefits</h3>
-                                <p>Unique NFTs and special $STORM token rewards</p>
+                                <h3 data-i18n="welcome.benefits.rewards.title">Premium Benefits</h3>
+                                <p data-i18n="welcome.benefits.rewards.description">Unique NFTs and special $STORM token rewards</p>
                             </div>
                             
                             <div class="benefit-card" data-category="program">
                                 <div class="benefit-icon">
                                     <i class="fas fa-rocket"></i>
                                 </div>
-                                <h3>Enhanced Program</h3>
-                                <p>Exclusive referral conditions and trading benefits</p>
+                                <h3 data-i18n="welcome.benefits.program.title">Enhanced Program</h3>
+                                <p data-i18n="welcome.benefits.program.description">Exclusive referral conditions and trading benefits</p>
                             </div>
                         </div>
                     </div>
@@ -60,11 +76,11 @@
                             <img src="src/images/influencers-intro.png" alt="Influencer Role" loading="lazy">
                         </div>
                         <div class="role-content">
-                            <h2>Influencer Program</h2>
-                            <p>Share your expertise and grow with us</p>
+                            <h2 data-i18n="roles.influencer.title">Influencer Program</h2>
+                            <p data-i18n="roles.influencer.description">Share your expertise and grow with us</p>
                             <a href="src/pages/influencer.html" class="cta-button" onclick="startPageTransition(event)">
                                 <i class="fas fa-users"></i>
-                                Become an Influencer
+                                <span data-i18n="roles.influencer.cta">Become an Influencer</span>
                             </a>
                         </div>
                     </div>
@@ -74,11 +90,11 @@
                             <img src="src/images/advocates-intro.png" alt="Advocate Role" loading="lazy">
                         </div>
                         <div class="role-content">
-                            <h2>Advocate Program</h2>
-                            <p>Help build our community</p>
+                            <h2 data-i18n="roles.advocate.title">Advocate Program</h2>
+                            <p data-i18n="roles.advocate.description">Help build our community</p>
                             <a href="src/pages/advocate.html" class="cta-button">
                                 <i class="fas fa-bullhorn"></i>
-                                Become an Advocate
+                                <span data-i18n="roles.advocate.cta">Become an Advocate</span>
                             </a>
                         </div>
                     </div>
@@ -89,30 +105,30 @@
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About</h3>
+                <h3 data-i18n="footer.about.title">About</h3>
                 <ul>
-                    <li><a href="https://storm.tg/" target="_blank">Storm Trade Website</a></li>
-                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank">What is Storm</a></li>
-                    <li><a href="https://storm.tg/terms_of_use.pdf" target="_blank">Terms and Conditions</a></li>
-                    <li><a href="https://certificate.quantstamp.com/full/storm-trade/21e4074a-b2cb-409d-b5df-48f683d0e8f3/index.html" target="_blank">Audit Smart Contract</a></li>
+                    <li><a href="https://storm.tg/" target="_blank" data-i18n="footer.about.website">Storm Trade Website</a></li>
+                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank" data-i18n="footer.about.whatIs">What is Storm</a></li>
+                    <li><a href="https://storm.tg/terms_of_use.pdf" target="_blank" data-i18n="footer.about.terms">Terms and Conditions</a></li>
+                    <li><a href="https://certificate.quantstamp.com/full/storm-trade/21e4074a-b2cb-409d-b5df-48f683d0e8f3/index.html" target="_blank" data-i18n="footer.about.audit">Audit Smart Contract</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Products</h3>
+                <h3 data-i18n="footer.products.title">Products</h3>
                 <ul>
-                    <li><a href="https://app.storm.tg/trade/TON_USDT" target="_blank">Trading App</a></li>
-                    <li><a href="https://app.storm.tg/vault/NOT" target="_blank">Earn</a></li>
+                    <li><a href="https://app.storm.tg/trade/TON_USDT" target="_blank" data-i18n="footer.products.trading">Trading App</a></li>
+                    <li><a href="https://app.storm.tg/vault/NOT" target="_blank" data-i18n="footer.products.earn">Earn</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Docs</h3>
+                <h3 data-i18n="footer.docs.title">Docs</h3>
                 <ul>
-                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank">Blog</a></li>
-                    <li><a href="https://docs.storm.tg/" target="_blank">Documentation</a></li>
+                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank" data-i18n="footer.docs.blog">Blog</a></li>
+                    <li><a href="https://docs.storm.tg/" target="_blank" data-i18n="footer.docs.documentation">Documentation</a></li>
                 </ul>
             </div>
             <div class="footer-section social">
-                <h3>Join our community</h3>
+                <h3 data-i18n="footer.community.title">Join our community</h3>
                 <div class="social-links">
                     <a href="https://x.com/storm_trade_ton" target="_blank" class="social-link">
                         <svg class="social-icon" viewBox="0 0 24 24">
@@ -128,7 +144,8 @@
             </div>
         </div>
     </footer>
-    <script src="src/js/index.js"></script>
-    <script src="src/js/transition.js"></script>
+    <script type="module" src="src/js/i18n.js"></script>
+    <script type="module" src="src/js/index.js"></script>
+    <script type="module" src="src/js/transition.js"></script>
 </body>
 </html>

@@ -1,4 +1,8 @@
+import { i18n } from './i18n.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    i18n.translate();
 
     const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
     const navbar = document.querySelector('.navbar');
@@ -13,33 +17,33 @@ document.addEventListener('DOMContentLoaded', () => {
         explorers: {
             baseCPM: '1x',
             categories: [
-                { name: 'Token Oriented Content', ratio: 1 },
-                { name: 'Video Sharing', ratio: 0.8 },
-                { name: 'News', ratio: 0.8 }
+                { name: 'tokenOrientedContent', ratio: 1 },
+                { name: 'videoSharing', ratio: 0.8 },
+                { name: 'news', ratio: 0.8 }
             ]
         },
         connectors: {
             baseCPM: '2x',
             categories: [
-                { name: 'Token Oriented Content', ratio: 1 },
-                { name: 'Platform Oriented Content', ratio: 1 },
-                { name: 'Video Sharing', ratio: 0.8 },
-                { name: 'News', ratio: 0.8 },
-                { name: 'Narrative Shill', ratio: 1.2 },
-                { name: 'Deep Analysis', ratio: 1.5 }
+                { name: 'tokenOrientedContent', ratio: 1 },
+                { name: 'platformOrientedContent', ratio: 1 },
+                { name: 'videoSharing', ratio: 0.8 },
+                { name: 'news', ratio: 0.8 },
+                { name: 'narrativeShill', ratio: 1.2 },
+                { name: 'deepAnalysis', ratio: 1.5 }
             ]
         },
         masterminds: {
             baseCPM: '3.2x',
             categories: [
-                { name: 'Token Oriented Content', ratio: 1 },
-                { name: 'Platform Oriented Content', ratio: 1 },
-                { name: 'Video Sharing', ratio: 0.8 },
-                { name: 'News', ratio: 0.8 },
-                { name: 'Narrative Shill', ratio: 1.2 },
-                { name: 'Deep Analysis', ratio: 1.5 },
-                { name: 'StormTrade Academy', ratio: 1.2 },
-                { name: 'Trading Competitions', ratio: 1.2 }
+                { name: 'tokenOrientedContent', ratio: 1 },
+                { name: 'platformOrientedContent', ratio: 1 },
+                { name: 'videoSharing', ratio: 0.8 },
+                { name: 'news', ratio: 0.8 },
+                { name: 'narrativeShill', ratio: 1.2 },
+                { name: 'deepAnalysis', ratio: 1.5 },
+                { name: 'stormTradeAcademy', ratio: 1.2 },
+                { name: 'tradingCompetitions', ratio: 1.2 }
             ]
         }
     };
@@ -102,19 +106,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     const btn = level.querySelector('.learn-more-button');
                     info.classList.remove('visible');
                     info.style.display = 'none';
-                    btn.textContent = 'Learn More';
+                    btn.setAttribute('data-i18n', 'levels.showMore');
+                    i18n.translate();
                 }
             });
 
             if (!isVisible) {
                 currentInfo.style.display = 'block';
                 setTimeout(() => currentInfo.classList.add('visible'), 10);
+                button.setAttribute('data-i18n', 'levels.showLess');
             } else {
                 currentInfo.classList.remove('visible');
                 setTimeout(() => currentInfo.style.display = 'none', 300);
+                button.setAttribute('data-i18n', 'levels.showMore');
             }
-
-            button.textContent = isVisible ? 'Learn More' : 'Show Less';
+            i18n.translate();
         });
     });
 
@@ -139,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-   
+    
     const applicationForm = document.getElementById('applicationForm');
     if (applicationForm) {
         applicationForm.addEventListener('submit', async (e) => {
@@ -217,8 +223,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="categories-list">
                             ${data.categories.map(cat => `
                                 <div class="category-item">
-                                    <span class="category-name">${cat.name}</span>
-                                    <span class="category-ratio">CPM Ratio: ×${cat.ratio}</span>
+                                    <span class="category-name" data-i18n="taskboard.table.categories.${cat.name}">${cat.name}</span>
+                                    <span class="category-ratio">
+                                        <span data-i18n="taskboard.table.cpmRatioPrefix">CPM Ratio:</span> ×${cat.ratio}
+                                    </span>
                                 </div>
                             `).join('')}
                         </div>
@@ -232,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </div>
                                     <div class="platform-name">X (Twitter)</div>
                                 </div>
-                                <div class="platform-cost">$10 per 1000 impressions</div>
+                                <div class="platform-cost">$10 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
                             </div>
                             <div class="platform-item">
                                 <div class="platform-item-header">
@@ -241,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </div>
                                     <div class="platform-name">Telegram</div>
                                 </div>
-                                <div class="platform-cost">$25 per 1000 impressions</div>
+                                <div class="platform-cost">$25 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
                             </div>
                             <div class="platform-item">
                                 <div class="platform-item-header">
@@ -250,12 +258,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </div>
                                     <div class="platform-name">Youtube</div>
                                 </div>
-                                <div class="platform-cost">$50 per 1000 impressions</div>
+                                <div class="platform-cost">$50 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
                             </div>
                         </div>
                     </div>
                 `;
                 tableContent.innerHTML = content;
+                i18n.translate();
             }
         }
 
