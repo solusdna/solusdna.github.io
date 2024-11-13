@@ -3,7 +3,7 @@ import { i18n } from './i18n.js';
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
 
-    // Добавляем перевод при загрузке страницы
+
     i18n.translate();
     
     window.addEventListener('scroll', () => {

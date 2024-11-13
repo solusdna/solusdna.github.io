@@ -301,7 +301,7 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .main-title {
         font-size: 48px;

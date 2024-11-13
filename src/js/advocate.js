@@ -1,7 +1,7 @@
 import { i18n } from './i18n.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Добавляем перевод при загрузке страницы
+
     i18n.translate();
 
     const navbar = document.querySelector('.navbar');

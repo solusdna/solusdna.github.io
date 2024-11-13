@@ -187,6 +187,7 @@ export const en = {
     products: {
       title: "Products",
       trading: "Trading App",
+      miniApp: "Mini App",
       earn: "Earn"
     },
     docs: {

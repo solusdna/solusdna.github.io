@@ -1360,7 +1360,6 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Убираем эффект прозрачности при скролле */
 .navbar.scrolled {
     background-color: #0A0B15;
 }
@@ -1463,8 +1462,8 @@
 }
 
 .footer {
-    margin-top: 100px;  /* Отступ сверху */
-    padding-bottom: 60px;  /* Отступ снизу */
+    margin-top: 100px;  
+    padding-bottom: 60px; 
 }
 
 .footer-content {

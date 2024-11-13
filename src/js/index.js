@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Добавляем перевод при загрузке страницы
     i18n.translate();
 
     const observerOptions = {

@@ -9,7 +9,7 @@ class I18n {
   }
 
   init() {
-    // Добавляем обработчики для кнопок
+  
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const lang = btn.getAttribute('data-lang');
@@ -24,7 +24,6 @@ class I18n {
   setLanguage(locale) {
     const elements = document.querySelectorAll('[data-i18n]');
     
-    // Добавляем анимацию затухания
     elements.forEach(el => {
         el.style.transition = 'opacity 0.3s ease';
         el.style.opacity = '0';
@@ -36,7 +35,6 @@ class I18n {
         this.translate();
         this.updateLanguageToggle();
         
-        // Возвращаем прозрачность
         elements.forEach(el => {
             el.style.opacity = '1';
         });
@@ -86,13 +84,10 @@ class I18n {
   }
 }
 
-// Создаем экземпляр
 export const i18n = new I18n();
 
-// Делаем i18n глобально доступным
 window.i18n = i18n;
 
-// Добавляем слушатель для загрузки DOM
 document.addEventListener('DOMContentLoaded', () => {
   i18n.translate();
   i18n.updateLanguageToggle();

@@ -527,7 +527,7 @@
     }
 }
 
-/* Стили для секции Overview */
+
 .overview-section {
     display: flex;
     align-items: center;
@@ -1348,7 +1348,6 @@
     animation-delay: 1.1s;
 }
 
-/* Анимация для карточек внутри секций */
 .level-card, .reward-card, .task-card {
     opacity: 0;
     transform: translateY(20px);
