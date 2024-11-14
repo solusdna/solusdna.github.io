@@ -166,7 +166,14 @@ export const ru = {
     email: "Email адрес*",
     fullName: "Полное имя*",
     location: "Где вы находитесь?*",
-    submit: "Отправить заяку"
+    discord: "Discord аккаунт*",
+    telegram: "Telegram никнейм",
+    platforms: "Платформы участия:",
+    socialLinks: "Ссылки на ваши социальные сети",
+    additionalInfo: "Дополнительная информация",
+    submit: "Отправить заявку",
+    successMessage: "Заявка успешно отправлена!",
+    errorMessage: "Ошибка при отправке заявки. Попробуйте снова."
   },
   finalCta: {
     title: "Готовы начать свой путь?",

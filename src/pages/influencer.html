@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/influencer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/toast.css">
 </head>
 <body>
     <nav class="navbar">
@@ -22,7 +23,7 @@
                     <li><a href="#rewards" class="nav-link" data-i18n="nav.rewards">Rewards</a></li>
                     <li><a href="#levels" class="nav-link" data-i18n="nav.levels">Levels</a></li>
                     <li><a href="#taskboard" class="nav-link" data-i18n="nav.tasks">Tasks</a></li>
-                    <li><a href="#" class="nav-link" onclick="toggleModal(); return false;" data-i18n="nav.applyNow">Apply Now</a></li>
+                    <li><a href="#" class="nav-link showFormButton" data-i18n="nav.applyNow">Apply Now</a></li>
                 </ul>
                 <div class="language-selector">
                     <div class="language-toggle">
@@ -30,6 +31,11 @@
                         <button class="lang-btn" data-lang="ru">RU</button>
                     </div>
                 </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
@@ -301,17 +307,17 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="discord">Discord handle*</label>
+                        <label for="discord" data-i18n="modal.discord">Discord handle*</label>
                         <input type="text" id="discord" name="discord" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="telegram">Telegram nickname</label>
+                        <label for="telegram" data-i18n="modal.telegram">Telegram nickname</label>
                         <input type="text" id="telegram" name="telegram">
                     </div>
                     
                     <div class="form-group">
-                        <label>Participation platforms:</label>
+                        <label data-i18n="modal.platforms">Participation platforms:</label>
                         <div class="checkbox-group">
                             <label><input type="checkbox" name="platforms" value="twitter"> Twitter</label>
                             <label><input type="checkbox" name="platforms" value="telegram"> Telegram</label>
@@ -320,12 +326,12 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="socialLinks">Links to your social networks</label>
+                        <label for="socialLinks" data-i18n="modal.socialLinks">Links to your social networks</label>
                         <textarea id="socialLinks" name="socialLinks"></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <label for="additionalInfo">Additional information</label>
+                        <label for="additionalInfo" data-i18n="modal.additionalInfo">Additional information</label>
                         <textarea id="additionalInfo" name="additionalInfo"></textarea>
                     </div>
                     
@@ -340,25 +346,25 @@
             <div class="footer-section">
                 <h3 data-i18n="footer.about.title">About</h3>
                 <ul>
-                    <li><a href="#" data-i18n="footer.about.website">Storm Trade Website</a></li>
-                    <li><a href="#" data-i18n="footer.about.whatIs">What is Storm</a></li>
-                    <li><a href="#" data-i18n="footer.about.terms">Terms and Conditions</a></li>
-                    <li><a href="#" data-i18n="footer.about.audit">Audit Smart Contract</a></li>
+                    <li><a href="https://storm.tg/" target="_blank" data-i18n="footer.about.website">Storm Trade Website</a></li>
+                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank" data-i18n="footer.about.whatIs">What is Storm</a></li>
+                    <li><a href="https://storm.tg/terms_of_use.pdf" target="_blank" data-i18n="footer.about.terms">Terms and Conditions</a></li>
+                    <li><a href="https://certificate.quantstamp.com/full/storm-trade/21e4074a-b2cb-409d-b5df-48f683d0e8f3/index.html" target="_blank" data-i18n="footer.about.audit">Audit Smart Contract</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3 data-i18n="footer.products.title">Products</h3>
                 <ul>
-                    <li><a href="#" data-i18n="footer.products.trading">Trading App</a></li>
-                    <li><a href="#" data-i18n="footer.products.earn">Earn</a></li>
+                    <li><a href="https://app.storm.tg/trade/TON_USDT" target="_blank" data-i18n="footer.products.trading">Trading App</a></li>
+                    <li><a href="https://app.storm.tg/vault/NOT" target="_blank" data-i18n="footer.products.earn">Earn</a></li>
                     <li><a href="https://t.me/StormTradeBot" target="_blank" data-i18n="footer.products.miniApp">Mini App</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3 data-i18n="footer.docs.title">Docs</h3>
                 <ul>
-                    <li><a href="#" data-i18n="footer.docs.blog">Blog</a></li>
-                    <li><a href="#" data-i18n="footer.docs.documentation">Documentation</a></li>
+                    <li><a href="https://mirror.xyz/0x0e6f32FB103aFE2f1C4a484B993C1cfc0816CE8a" target="_blank" data-i18n="footer.docs.blog">Blog</a></li>
+                    <li><a href="https://docs.storm.tg/" target="_blank" data-i18n="footer.docs.documentation">Documentation</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -382,5 +388,8 @@
     <script type="module" src="../js/i18n.js"></script>
     <script type="module" src="../js/influencer.js"></script>
     <script type="module" src="../js/transition.js"></script>
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
 </body>
 </html>

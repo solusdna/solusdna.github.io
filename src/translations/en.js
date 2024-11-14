@@ -166,7 +166,14 @@ export const en = {
     email: "Email address*",
     fullName: "Full Name*",
     location: "Where are you located?*",
-    submit: "Submit Application"
+    discord: "Discord handle*",
+    telegram: "Telegram nickname",
+    platforms: "Participation platforms:",
+    socialLinks: "Links to your social networks",
+    additionalInfo: "Additional information",
+    submit: "Submit Application",
+    successMessage: "Application successfully submitted!",
+    errorMessage: "Error when submitting application. Please try again."
   },
   finalCta: {
     title: "Ready to Start Your Journey?",

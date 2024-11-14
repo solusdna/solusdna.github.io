@@ -1,6 +1,142 @@
 import { i18n } from './i18n.js';
 
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxw2s-VZdtQmpcj7ug594kbTo1s4paH1ynNDtM8bvbe0q24ztHYxDOd0FWYytuiyJDY/exec';
+
+let modalOverlay;
+let closeModal;
+let applicationForm;
+
+function showToast(message, type = 'success') {
+
+    const existingToasts = document.querySelectorAll('.toast');
+    existingToasts.forEach(toast => toast.remove());
+    
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    toast.offsetHeight;
+    
+    requestAnimationFrame(() => {
+        toast.classList.add('visible');
+    });
+
+    setTimeout(() => {
+        toast.classList.remove('visible');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
+function toggleModal() {
+    if (modalOverlay) {
+        modalOverlay.classList.toggle('visible');
+        document.body.classList.toggle('scroll-lock');
+    }
+}
+
+async function handleFormSubmit(e) {
+    e.preventDefault();
+    
+    const submitButton = document.querySelector('.submit-button');
+    const loaderOverlay = document.querySelector('.loader-overlay');
+    submitButton.disabled = true;
+    
+    loaderOverlay.classList.add('visible');
+    
+    const formData = {
+        email: document.getElementById('userEmail').value,
+        fullName: document.getElementById('userName').value,
+        location: document.getElementById('location').value,
+        discord: document.getElementById('discord').value,
+        telegram: document.getElementById('telegram').value,
+        platforms: Array.from(document.querySelectorAll('input[name="platforms"]:checked'))
+            .map(checkbox => checkbox.value),
+        socialLinks: document.getElementById('socialLinks').value,
+        additionalInfo: document.getElementById('additionalInfo').value
+    };
+
+    try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+
+        toggleModal();
+        
+        setTimeout(() => {
+            loaderOverlay.classList.remove('visible');
+            showToast(i18n.getTranslation('modal.successMessage'), 'success');
+            applicationForm.reset();
+        }, 500);
+
+    } catch (error) {
+        console.error('Error:', error);
+        loaderOverlay.classList.remove('visible');
+        showToast(i18n.getTranslation('modal.errorMessage'), 'error');
+    } finally {
+        submitButton.disabled = false;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    modalOverlay = document.getElementById('modalOverlay');
+    closeModal = document.querySelector('.close-modal');
+    applicationForm = document.getElementById('applicationForm');
+    
+    const navApplyButton = document.querySelector('.nav-link.showFormButton');
+    if (navApplyButton) {
+        navApplyButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation(); 
+            toggleModal();
+        });
+    }
+    
+    const finalCtaButton = document.getElementById('finalCtaButton');
+    if (finalCtaButton) {
+        finalCtaButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleModal();
+        });
+    }
+
+    if (closeModal) {
+        closeModal.addEventListener('click', toggleModal);
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) toggleModal();
+        });
+    }
+
+    if (applicationForm) {
+        applicationForm.addEventListener('submit', handleFormSubmit);
+    }
+
+    // Обработчик для остальных навигационных ссылок
+    document.querySelectorAll('.nav-link:not(.showFormButton)').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href !== '#') {
+                e.preventDefault();
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
 
     i18n.translate();
 
@@ -8,9 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     const learnMoreButtons = document.querySelectorAll('.learn-more-button');
     const categoryButtons = document.querySelectorAll('.category-button');
-    const showFormButtons = document.querySelectorAll('#showFormButton, #finalCtaButton, .showFormButton');
-    const modalOverlay = document.getElementById('modalOverlay');
-    const closeModal = document.querySelector('.close-modal');
     const rewardsSection = document.querySelector('.rewards-section');
 
     const categoryData = {
@@ -47,29 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         }
     };
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            
-            if (targetId === '#' || link.id === 'showFormButton') {
-                toggleModal();
-                return;
-            }
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const navbarHeight = navbar.offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
 
     const observerOptions = {
         threshold: 0.15,
@@ -124,73 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function toggleModal() {
-        if (modalOverlay) {
-            modalOverlay.classList.toggle('visible');
-            document.body.classList.toggle('scroll-lock');
-        }
-    }
-
-    showFormButtons.forEach(button => {
-        button.addEventListener('click', toggleModal);
-    });
-
-    if (closeModal) {
-        closeModal.addEventListener('click', toggleModal);
-    }
-
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) toggleModal();
-        });
-    }
-
-    
-    const applicationForm = document.getElementById('applicationForm');
-    if (applicationForm) {
-        applicationForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(applicationForm);
-            const data = Object.fromEntries(formData);
-
-            try {
-                const response = await fetch('YOUR_API_ENDPOINT', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    showToast('Application submitted successfully!');
-                    toggleModal();
-                    applicationForm.reset();
-                } else {
-                    throw new Error('Failed to submit application');
-                }
-            } catch (error) {
-                showToast('Failed to submit application. Please try again.');
-                console.error('Error:', error);
-            }
-        });
-    }
-
-    
-    function showToast(message) {
-        const toast = document.createElement('div');
-        toast.classList.add('toast');
-        toast.textContent = message;
-        document.body.appendChild(toast);
-
-        setTimeout(() => toast.classList.add('visible'), 100);
-        setTimeout(() => {
-            toast.classList.remove('visible');
-            setTimeout(() => document.body.removeChild(toast), 300);
-        }, 3000);
-    }
-
-    
     function initCPMTable() {
         const tableContent = document.querySelector('.table-content');
         const tabButtons = document.querySelectorAll('.tab-button');
@@ -296,4 +339,21 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', handleScroll);
     handleScroll(); 
+
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
 });

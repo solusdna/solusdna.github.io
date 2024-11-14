@@ -430,3 +430,91 @@ h2 {
     background-color: #0C0E1C;
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 15px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 300px;
+        background: var(--primary-dark);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: var(--white);
+        transition: all 0.3s ease;
+    }
+
+    .hamburger span:nth-child(1) { top: 0; }
+    .hamburger span:nth-child(2) { top: 9px; }
+    .hamburger span:nth-child(3) { top: 18px; }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 9px;
+    }
+
+    .main-title {
+        font-size: 42px;
+    }
+
+    .language-selector {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .nav-logo img {
+        width: 30px;
+    }
+
+    .nav-logo {
+        font-size: 18px;
+    }
+}

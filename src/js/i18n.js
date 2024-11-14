@@ -56,6 +56,10 @@ class I18n {
     });
   }
 
+  t(key) {
+    return this.getTranslation(key);
+  }
+
   getTranslation(key) {
     const keys = key.split('.');
     let translation = this.translations[this.currentLocale];
