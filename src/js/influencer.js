@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             baseCPM: '2x',
             categories: [
                 { name: 'tokenOrientedContent', ratio: 1 },
-                { name: 'platformOrientedContent', ratio: 1 },
+                { name: 'platformContent', ratio: 1 },
                 { name: 'videoSharing', ratio: 0.8 },
                 { name: 'news', ratio: 0.8 },
                 { name: 'narrativeShill', ratio: 1.2 },
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
             baseCPM: '3.2x',
             categories: [
                 { name: 'tokenOrientedContent', ratio: 1 },
-                { name: 'platformOrientedContent', ratio: 1 },
+                { name: 'platformContent', ratio: 1 },
                 { name: 'videoSharing', ratio: 0.8 },
                 { name: 'news', ratio: 0.8 },
                 { name: 'narrativeShill', ratio: 1.2 },
@@ -262,46 +262,55 @@ document.addEventListener('DOMContentLoaded', () => {
             function renderNewContent() {
                 const content = `
                     <div class="content-row">
-                        <div class="base-cpm-value">${data.baseCPM}</div>
-                        <div class="categories-list">
-                            ${data.categories.map(cat => `
-                                <div class="category-item">
-                                    <span class="category-name" data-i18n="taskboard.table.categories.${cat.name}">${cat.name}</span>
-                                    <span class="category-ratio">
-                                        <span data-i18n="taskboard.table.cpmRatioPrefix">CPM Ratio:</span> ×${cat.ratio}
-                                    </span>
-                                </div>
-                            `).join('')}
+                        <div class="table-section">
+                            <div class="section-header">Base CPM</div>
+                            <div class="base-cpm-value">${data.baseCPM}</div>
                         </div>
-                        <div class="platforms-list">
-                            <div class="platform-item">
-                                <div class="platform-item-header">
-                                    <div class="platform-icon">
-                                        <svg class="x-twitter" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
-                                            <path fill="#8EE96F" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                                        </svg>
+                        
+                        <div class="table-section">
+                            <div class="section-header">Available Content Category</div>
+                            <div class="categories-list">
+                                ${data.categories.map(cat => `
+                                    <div class="category-item">
+                                        <span class="category-name">${cat.name}</span>
+                                        <span class="category-ratio">CPM Ratio: ×${cat.ratio}</span>
                                     </div>
-                                    <div class="platform-name">X (Twitter)</div>
-                                </div>
-                                <div class="platform-cost">$10 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
+                                `).join('')}
                             </div>
-                            <div class="platform-item">
-                                <div class="platform-item-header">
-                                    <div class="platform-icon">
-                                        <i class="fa-brands fa-telegram"></i>
+                        </div>
+                        
+                        <div class="table-section">
+                            <div class="section-header">Platforms</div>
+                            <div class="platforms-list">
+                                <div class="platform-item">
+                                    <div class="platform-item-header">
+                                        <div class="platform-icon">
+                                            <svg class="x-twitter" viewBox="0 0 24 24" aria-hidden="true" width="18" height="18">
+                                                <path fill="#8EE96F" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="platform-name">X (Twitter)</div>
                                     </div>
-                                    <div class="platform-name">Telegram</div>
+                                    <div class="platform-cost">$10 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
                                 </div>
-                                <div class="platform-cost">$25 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
-                            </div>
-                            <div class="platform-item">
-                                <div class="platform-item-header">
-                                    <div class="platform-icon">
-                                        <i class="fa-brands fa-youtube"></i>
+                                <div class="platform-item">
+                                    <div class="platform-item-header">
+                                        <div class="platform-icon">
+                                            <i class="fa-brands fa-telegram"></i>
+                                        </div>
+                                        <div class="platform-name">Telegram</div>
                                     </div>
-                                    <div class="platform-name">Youtube</div>
+                                    <div class="platform-cost">$25 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
                                 </div>
-                                <div class="platform-cost">$50 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
+                                <div class="platform-item">
+                                    <div class="platform-item-header">
+                                        <div class="platform-icon">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </div>
+                                        <div class="platform-name">Youtube</div>
+                                    </div>
+                                    <div class="platform-cost">$50 <span data-i18n="taskboard.table.impressions">per 1000 impressions</span></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -339,21 +348,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', handleScroll);
     handleScroll(); 
-
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        });
-    });
 });

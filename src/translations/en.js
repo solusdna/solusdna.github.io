@@ -5,7 +5,9 @@ export const en = {
     tasks: "Tasks",
     steps: "Steps",
     applyNow: "Apply Now",
-    joinNow: "Join Now"
+    joinNow: "Join Now",
+    advocates: "Advocates",
+    influencers: "Influencers"
   },
   welcome: {
     title: "WELCOME TO",

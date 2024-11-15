@@ -5,7 +5,9 @@ export const ru = {
     tasks: "Задачи",
     steps: "Этапы",
     applyNow: "Подать заявку",
-    joinNow: "Присоединиться"
+    joinNow: "Присоединиться",
+    advocates: "Адвокаты",
+    influencers: "Инфлюенсеры"
   },
   welcome: {
     title: "ДОБРО ПОЖАЛОВАТЬ В АМБАССАДОРСКУЮ ПРОГРАММУ",

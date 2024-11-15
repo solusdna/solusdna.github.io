@@ -1,0 +1,506 @@
+@media screen and (max-width: 768px) {
+  /* Обновляем стили для навигации на главной странице */
+  .welcome-container .navbar-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 11, 21, 0.98);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+  }
+
+  /* Обновляем стили для гамбургера на главной странице */
+  .welcome-container .hamburger {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+  }
+
+  /* Обновляем стили для меню на главной странице */
+  .welcome-container .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: rgba(10, 11, 21, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease-in-out;
+      z-index: 1000;
+  }
+
+  .welcome-container .nav-menu.active {
+      right: 0;
+  }
+
+  .welcome-lang {
+      position: static;
+      margin-top: 30px;
+      z-index: 1002;
+      display: flex;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 3px;
+      gap: 2px;
+      height: 35px;
+  }
+
+  .welcome-lang .lang-btn {
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      min-width: 40px;
+      height: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+  }
+
+  .welcome-lang .lang-btn[data-active="true"] {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+  }
+
+  .welcome-container .nav-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Базовые стили навигации */
+  .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+  }
+
+  /* Стили для мобильного меню */
+  .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: rgba(10, 11, 21, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease-in-out;
+      z-index: 1000;
+  }
+
+  .nav-menu.active {
+      right: 0;
+  }
+
+  .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 40px;
+  }
+
+  .nav-link {
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+  }
+
+  /* Стили для селектора языка */
+  .language-selector {
+      position: static;
+      margin-top: 30px;
+  }
+
+  .language-toggle {
+      display: flex;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 3px;
+      gap: 2px;
+  }
+
+  .lang-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      min-width: 45px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+  }
+
+  /* Стили для гамбургер-меню */
+  .hamburger {
+      display: block;
+      position: relative;
+      z-index: 1001;
+  }
+
+  /* Стили для секции наград */
+  .rewards-container {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .rewards-description {
+      border-right: none;
+      border-bottom: 1px solid rgba(100, 65, 165, 0.2);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+  }
+
+  .rewards-grid {
+      grid-template-columns: 1fr;
+  }
+
+  /* Стили для сетки уровней и шагов */
+  .levels-container,
+  .steps-container {
+      grid-template-columns: 1fr;
+  }
+
+  /* Стили для контента страниц */
+  .influencer-content,
+  .advocate-content {
+      padding-top: 60px;
+  }
+
+  .overview-section {
+      padding: 40px 20px;
+  }
+
+  .section-title {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .modal-inner {
+      padding: 30px 15px;
+  }
+
+  .form-group label {
+      font-size: 0.9rem;
+  }
+
+  .checkbox-group {
+      grid-template-columns: 1fr;
+  }
+
+  .floating-logos {
+      display: none;
+  }
+
+  /* Стили для футера */
+  .footer-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+
+  .social-links {
+      justify-content: center;
+  }
+
+  .footer-section {
+      margin-bottom: 30px;
+  }
+
+  /* Стили для главного контейнера */
+  .welcome-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 15px;
+      overflow: hidden;
+      max-width: 100vw;
+  }
+
+  .header-content {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Стили для заголовков */
+  .main-title {
+      font-size: clamp(24px, 4vw, 32px);
+      line-height: 1.2;
+      margin: 0 0 20px 0;
+      text-align: center;
+      white-space: normal;
+      word-wrap: break-word;
+      width: 100%;
+      max-width: 100%;
+  }
+
+  .title-line {
+      display: block;
+      font-size: 1.6rem;
+      margin: 5px 0;
+      white-space: normal;
+  }
+
+  .highlight {
+      font-size: clamp(28px, 5vw, 36px);
+      display: inline-block;
+      margin: 5px 0;
+      white-space: normal;
+      width: 100%;
+  }
+
+  /* Стили для описания */
+  .hero-description {
+      font-size: 16px;
+      line-height: 1.4;
+      margin: 15px auto;
+      max-width: 100%;
+      padding: 0 10px;
+      text-align: center;
+  }
+
+  /* Стили для сетки преимуществ */
+  .benefits-grid {
+      margin: 30px auto 0;
+      padding: 0 10px;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+  }
+
+  .benefit-card {
+      padding: 20px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .benefit-card h3 {
+      margin: 15px 0 10px;
+  }
+
+  .benefit-card p {
+      margin: 0;
+  }
+
+  /* Стили для логотипа */
+  .logo-container {
+      margin: 10px auto;
+      width: 100%;
+      text-align: center;
+  }
+
+  .logo-image {
+      max-width: 150px;
+      height: auto;
+      margin: 0 auto;
+  }
+
+  /* Стили для приветстенной секции */
+  .welcome-section {
+      padding: 100px 15px 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .welcome-container {
+      padding: 40px 10px;
+  }
+
+  .main-title {
+      font-size: 1.6rem;
+  }
+
+  .title-line {
+      font-size: 1.4rem;
+  }
+
+  .highlight {
+      font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cpm-table-container {
+      padding: 15px;
+      background: rgba(15, 16, 22, 0.6);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+  }
+
+  .table-header {
+      display: none;
+  }
+
+  .content-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 15px;
+  }
+
+  .base-cpm-value {
+      font-size: 42px;
+      text-align: center;
+      padding: 20px;
+      background: rgba(12, 14, 28, 0.7);
+      border: 1px solid rgba(142, 233, 111, 0.1);
+      border-radius: 12px;
+  }
+
+  .categories-list {
+      background: rgba(12, 14, 28, 0.7);
+      border: 1px solid rgba(142, 233, 111, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+  }
+
+  .category-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid rgba(142, 233, 111, 0.1);
+  }
+
+  .category-item:last-child {
+      border-bottom: none;
+  }
+
+  .category-name {
+      font-size: 15px;
+  }
+
+  .category-ratio {
+      font-size: 14px;
+      color: var(--accent-green);
+  }
+
+  .platforms-list {
+      display: grid;
+      gap: 12px;
+      background: rgba(12, 14, 28, 0.7);
+      border: 1px solid rgba(142, 233, 111, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+  }
+
+  .platform-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid rgba(142, 233, 111, 0.1);
+  }
+
+  .platform-item:last-child {
+      border-bottom: none;
+  }
+
+  .platform-item-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .platform-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(142, 233, 111, 0.1);
+      border-radius: 6px;
+      padding: 4px;
+  }
+
+  .platform-name {
+      font-size: 15px;
+      color: var(--white);
+  }
+
+  .platform-cost {
+      font-size: 14px;
+      color: var(--accent-green);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Вертикальное расположение ролей */
+  .tab-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 12px;
+      margin-bottom: 20px;
+  }
+
+  .tab-button {
+      width: 100%;
+      padding: 12px;
+      background: rgba(12, 14, 28, 0.7);
+      border: 1px solid rgba(142, 233, 111, 0.1);
+      border-radius: 12px;
+      font-size: 14px;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  }
+
+  .tab-button.active {
+      background: rgba(142, 233, 111, 0.1);
+      border-color: rgba(142, 233, 111, 0.3);
+  }
+
+  /* Стили для мобильных заголовков секций */
+  .section-header {
+      font-size: 14px;
+      color: rgba(142, 233, 111, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .section-header {
+      display: none;
+  }
+}

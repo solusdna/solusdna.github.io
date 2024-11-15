@@ -486,16 +486,13 @@
     transform: none;
 }
 
+/* Адаптивный дизайн */
 @media (max-width: 1024px) {
     .categories-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
     
     .categories-container {
         grid-template-columns: 1fr;
@@ -522,7 +519,7 @@
         border-right: none;
         border-bottom: 1px solid rgba(142, 233, 111, 0.2);
     }
-}
+
 
 @media (max-width: 480px) {
     .purpose-section,
@@ -1780,56 +1777,20 @@
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    .overview-section {
-        flex-direction: column;
-        padding: 60px 20px 30px;
-        text-align: center;
-    }
-
-    .main-title {
-        font-size: 3rem;
-    }
-
-    .levels-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .platform-list {
-        grid-template-columns: 1fr;
-    }
-
-    .categories-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
+@media screen and (max-width: 768px) {
     .modal-content {
         width: 95%;
-        margin: 10px;
+        max-height: 85vh;
+        margin: 20px;
         padding: 15px;
     }
 
-    .form-group {
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 2.5rem;
+    .modal-header h2 {
+        font-size: 1.5rem;
     }
 
-    .platform-item {
-        padding: 15px;
-    }
-
-    .level-header {
-        padding: 15px;
-    }
-
-    .level-content {
-        padding: 15px;
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
     }
 }

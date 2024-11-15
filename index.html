@@ -2,33 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Storm Trade Community</title>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/mobile.css">
 </head>
 <body class="dark-theme">
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="index.html" class="nav-logo">
+            <div class="nav-logo">
                 <img src="src/images/logo-white.png" alt="Storm Trade Logo">
                 Storm Trade <span class="white-text">Ambassadors</span>
-            </a>
+            </div>
             <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="src/pages/influencer.html" class="nav-link" data-i18n="nav.influencers">Influencers</a></li>
+                    <li><a href="src/pages/advocate.html" class="nav-link" data-i18n="nav.advocates">Advocates</a></li>
+                </ul>
                 <div class="language-selector">
-                    <div class="language-toggle">
+                    <div class="language-toggle welcome-lang">
                         <button class="lang-btn" data-lang="en">EN</button>
                         <button class="lang-btn" data-lang="ru">RU</button>
                     </div>
                 </div>
             </div>
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
@@ -153,5 +158,6 @@
     <script type="module" src="src/js/i18n.js"></script>
     <script type="module" src="src/js/index.js"></script>
     <script type="module" src="src/js/transition.js"></script>
+    <script src="src/js/menu.js"></script>
 </body>
 </html>
