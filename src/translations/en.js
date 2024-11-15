@@ -30,14 +30,14 @@ export const en = {
   },
   roles: {
     influencer: {
-      title: "Influencer Program",
+      title: "Influencers",
       description: "Share your expertise and grow with us",
       fullDescription: "Storm Trade Influencers are the catalysts who help others dive into the world of trading with our platform. You attract new traders, share your recommendations, and show why Storm Trade is the ultimate tool for success.",
       highlightMessage: "Simply share, teach, and inspire — and earn amazing rewards and well-deserved recognition along the way.",
       cta: "Become an Influencer"
     },
     advocate: {
-      title: "Advocate Program",
+      title: "Advocates",
       description: "Help build our community",
       fullDescription: "The Advocates Program was designed to promote awareness and foster a vibrant community around Storm Trade. This comprehensive initiative includes a structured framework with progress levels, tasks, and rewards, enhancing participant engagement and deepening their connection with the project.",
       highlightMessage: "If you are passionate about Storm Trade, actively engaged in trading, or create high-quality educational content, you are exactly who we are looking for.",
