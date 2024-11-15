@@ -1,5 +1,5 @@
 @media screen and (max-width: 768px) {
-  /* Обновляем стили для навигации на главной странице */
+ 
   .welcome-container .navbar-container {
       position: fixed;
       top: 0;
@@ -14,7 +14,7 @@
       padding: 15px;
   }
 
-  /* Обновляем стили для гамбургера на главной странице */
+
   .welcome-container .hamburger {
       display: block;
       position: fixed;
@@ -23,7 +23,7 @@
       z-index: 1001;
   }
 
-  /* Обновляем стили для меню на главной странице */
+
   .welcome-container .nav-menu {
       position: fixed;
       top: 0;
@@ -87,7 +87,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* Базовые стили навигации */
+  
   .navbar-container {
       display: flex;
       justify-content: space-between;
@@ -95,7 +95,7 @@
       padding: 0 15px;
   }
 
-  /* Стили для мобильного меню */
+  
   .nav-menu {
       position: fixed;
       top: 0;
@@ -131,7 +131,7 @@
       text-decoration: none;
   }
 
-  /* Стили для селектора языка */
+  
   .language-selector {
       position: static;
       margin-top: 30px;
@@ -157,14 +157,14 @@
       color: white;
   }
 
-  /* Стили для гамбургер-меню */
+
   .hamburger {
       display: block;
       position: relative;
       z-index: 1001;
   }
 
-  /* Стили для секции наград */
+ 
   .rewards-container {
       flex-direction: column;
       padding: 20px;
@@ -181,13 +181,13 @@
       grid-template-columns: 1fr;
   }
 
-  /* Стили для сетки уровней и шагов */
+ 
   .levels-container,
   .steps-container {
       grid-template-columns: 1fr;
   }
 
-  /* Стили для контента страниц */
+  
   .influencer-content,
   .advocate-content {
       padding-top: 60px;
@@ -218,7 +218,7 @@
       display: none;
   }
 
-  /* Стили для футера */
+
   .footer-content {
       grid-template-columns: 1fr;
       text-align: center;
@@ -232,7 +232,7 @@
       margin-bottom: 30px;
   }
 
-  /* Стили для главного контейнера */
+
   .welcome-container {
       min-height: 100vh;
       display: flex;
@@ -252,7 +252,7 @@
       align-items: center;
   }
 
-  /* Стили для заголовков */
+  
   .main-title {
       font-size: clamp(24px, 4vw, 32px);
       line-height: 1.2;
@@ -279,7 +279,7 @@
       width: 100%;
   }
 
-  /* Стили для описания */
+ 
   .hero-description {
       font-size: 16px;
       line-height: 1.4;
@@ -289,7 +289,7 @@
       text-align: center;
   }
 
-  /* Стили для сетки преимуществ */
+
   .benefits-grid {
       margin: 30px auto 0;
       padding: 0 10px;
@@ -300,24 +300,25 @@
   }
 
   .benefit-card {
-      padding: 20px;
-      margin: 0 auto;
-      width: 100%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        padding: 20px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
   }
 
   .benefit-card h3 {
-      margin: 15px 0 10px;
+        font-size: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
   }
 
   .benefit-card p {
       margin: 0;
   }
 
-  /* Стили для логотипа */
   .logo-container {
       margin: 10px auto;
       width: 100%;
@@ -330,7 +331,7 @@
       margin: 0 auto;
   }
 
-  /* Стили для приветстенной секции */
+ 
   .welcome-section {
       padding: 100px 15px 40px;
   }
@@ -396,6 +397,8 @@
       align-items: center;
       padding: 12px;
       border-bottom: 1px solid rgba(142, 233, 111, 0.1);
+      gap: 15px;
+      flex-wrap: wrap;
   }
 
   .category-item:last-child {
@@ -403,12 +406,18 @@
   }
 
   .category-name {
-      font-size: 15px;
+      font-size: 14px;
+      text-align: left;
+      flex: 1;
+      min-width: 140px;
   }
 
   .category-ratio {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--accent-green);
+      white-space: normal;
+      text-align: right;
+      max-width: 150px;
   }
 
   .platforms-list {
@@ -461,7 +470,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* Вертикальное расположение ролей */
+
   .tab-buttons {
       display: flex;
       flex-direction: column;
@@ -488,7 +497,7 @@
       border-color: rgba(142, 233, 111, 0.3);
   }
 
-  /* Стили для мобильных заголовков секций */
+  
   .section-header {
       font-size: 14px;
       color: rgba(142, 233, 111, 0.8);
@@ -502,5 +511,87 @@
 @media screen and (min-width: 769px) {
   .section-header {
       display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .final-section,
+  .role-card {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .final-section h2,
+  .role-card h3 {
+    font-size: clamp(16px, 4vw, 18px);
+    line-height: 1.3;
+    white-space: normal;
+    word-break: break-word;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+  .final-section p,
+  .role-card p {
+    font-size: clamp(14px, 3.5vw, 16px);
+    line-height: 1.5;
+    margin: 0 auto 15px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+  .final-section .cta-button,
+  .role-card .cta-button {
+    width: auto;
+    min-width: 200px;
+    max-width: 90%;
+    padding: 12px 20px;
+    white-space: normal;
+    word-break: break-word;
+    height: auto;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(12px, 3vw, 14px);
+    margin-top: 20px;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  .final-section h2,
+  .role-card h3 {
+    font-size: 14px;
+  }
+  
+  .final-section p,
+  .role-card p {
+    font-size: 12px;
+  }
+
+  .final-section .cta-button,
+  .role-card .cta-button {
+    font-size: 12px;
+    min-width: 180px;
+    padding: 10px 15px;
   }
 }

@@ -225,7 +225,7 @@ export const en = {
       platforms: "Platforms",
       categories: {
         tokenOrientedContent: "Token Oriented Content",
-        platformOrientedContent: "Platform Oriented Content",
+        platformContent: "Platform Oriented Content",
         videoSharing: "Video Sharing",
         news: "News",
         narrativeShill: "Narrative Shill",

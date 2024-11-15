@@ -263,24 +263,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 const content = `
                     <div class="content-row">
                         <div class="table-section">
-                            <div class="section-header">Base CPM</div>
+                            <div class="section-header" data-i18n="taskboard.table.baseCpm">Base CPM</div>
                             <div class="base-cpm-value">${data.baseCPM}</div>
                         </div>
                         
                         <div class="table-section">
-                            <div class="section-header">Available Content Category</div>
+                            <div class="section-header" data-i18n="taskboard.table.contentCategory">Available Content Category</div>
                             <div class="categories-list">
                                 ${data.categories.map(cat => `
                                     <div class="category-item">
-                                        <span class="category-name">${cat.name}</span>
-                                        <span class="category-ratio">CPM Ratio: ×${cat.ratio}</span>
+                                        <span class="category-name" data-i18n="taskboard.table.categories.${cat.name}">${cat.name}</span>
+                                        <span class="category-ratio"><span data-i18n="taskboard.table.cpmRatioPrefix">CPM Ratio:</span> ×${cat.ratio}</span>
                                     </div>
                                 `).join('')}
                             </div>
                         </div>
                         
                         <div class="table-section">
-                            <div class="section-header">Platforms</div>
+                            <div class="section-header" data-i18n="taskboard.table.platforms">Platforms</div>
                             <div class="platforms-list">
                                 <div class="platform-item">
                                     <div class="platform-item-header">

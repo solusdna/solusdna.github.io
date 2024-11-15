@@ -1468,3 +1468,11 @@
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.main-title, 
+.benefit-card h3,
+.final-section h2 {
+    white-space: nowrap;
+    word-break: keep-all;
+    hyphens: none;
+}
