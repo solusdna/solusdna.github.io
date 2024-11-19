@@ -115,7 +115,7 @@ export const en = {
       task1: "Create and share user-generated content on social media",
       task2: "Spread awareness about Storm Trade",
       benefit1: "CPM rate of x1",
-      benefit2: "Limited access to Discord and Telegram channels",
+      benefit2: "Limited access to Influencers Telegram group",
       benefit3: "Opportunity to grow within the program"
     },
     connector: {
