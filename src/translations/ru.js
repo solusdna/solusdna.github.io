@@ -115,7 +115,7 @@ export const ru = {
       task1: "Создавать и делиться пользовательским контентом в социальных сетях",
       task2: "Распространять информацию о Storm Trade",
       benefit1: "Ставка CPM x1",
-      benefit2: "Ограниченный доступ к каналам Discord и Telegram",
+      benefit2: "Доступ к закрытой Telegram группе",
       benefit3: "Возможность роста в программе"
     },
     connector: {
