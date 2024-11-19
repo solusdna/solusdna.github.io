@@ -1476,3 +1476,57 @@
     word-break: keep-all;
     hyphens: none;
 }
+
+.response-time-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.response-time {
+    background: rgba(51, 189, 36, 0.294);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.response-time:hover {
+    background: rgba(46, 203, 14, 0.201);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.response-time i {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.response-time span {
+    font-size: 0.95rem;
+    color: #000000;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .response-time {
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+    
+    .response-time i {
+        font-size: 1.2rem;
+    }
+    
+    .response-time span {
+        font-size: 0.9rem;
+    }
+}
