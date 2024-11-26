@@ -53,6 +53,8 @@ async function handleFormSubmit(e) {
         platforms: Array.from(document.querySelectorAll('input[name="platforms"]:checked'))
             .map(checkbox => checkbox.value),
         socialLinks: document.getElementById('socialLinks').value,
+        socialMediaLanguage: document.getElementById('socialMediaLanguage').value,
+        referrer: document.getElementById('referrer').value,
         additionalInfo: document.getElementById('additionalInfo').value
     };
 
