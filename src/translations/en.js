@@ -175,7 +175,9 @@ export const en = {
     additionalInfo: "Additional information",
     submit: "Submit Application",
     successMessage: "Application successfully submitted!",
-    errorMessage: "Error when submitting application. Please try again."
+    errorMessage: "Error when submitting application. Please try again.",
+    socialMediaLanguage: "Which language do you use to manage your social media accounts?",
+    referrer: "How did you learn about the ambassador program, and who invited you to join?"
   },
   finalCta: {
     title: "Ready to Start Your Journey?",
