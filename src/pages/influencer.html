@@ -279,6 +279,100 @@
             </div>
         </section>
 
+        <section class="potential-rewards-section">
+            <div class="rewards-container">
+                <div class="rewards-info">
+                    <h2 class="section-title" data-i18n="potentialRewards.title">Potential Rewards</h2>
+                    <p class="section-description" data-i18n="potentialRewards.description">Earn rewards for creating high-quality content and growing your audience</p>
+                    
+                    <div class="rewards-features">
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 data-i18n="potentialRewards.cards.roleMultipliers.title">Role Multipliers</h3>
+                                <p data-i18n="potentialRewards.cards.roleMultipliers.description">Explorer (1x) → Connector (2x) → Mastermind (3.2x)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 data-i18n="potentialRewards.cards.contentTypes.title">Content Types</h3>
+                                <p data-i18n="potentialRewards.cards.contentTypes.description">Different content types offer varied CPM ratios from 0.8x to 1.5x</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 data-i18n="potentialRewards.cards.platformRates.title">Platform Rates</h3>
+                                <p data-i18n="potentialRewards.cards.platformRates.description">X: $10 CPM • Telegram: $25 CPM • YouTube: $50 CPM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-container">
+                    <div class="cpm-calculator">
+                        <div class="calculator-header">
+                            <h2>CPM Calculator</h2>
+                        </div>
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label data-i18n="cpmCalculator.selectRole">Select your role</label>
+                                <div class="custom-select">
+                                    <select id="roleSelect">
+                                        <option value="explorers">Explorer</option>
+                                        <option value="connectors">Connector</option>
+                                        <option value="masterminds">Mastermind</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label data-i18n="cpmCalculator.selectPlatform">Select platform</label>
+                                <div class="custom-select">
+                                    <select id="platformSelect">
+                                        <option value="twitter">X (Twitter)</option>
+                                        <option value="telegram">Telegram</option>
+                                        <option value="youtube">YouTube</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label data-i18n="cpmCalculator.selectContent">Select content type</label>
+                                <div class="custom-select">
+                                    <select id="contentSelect"></select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label data-i18n="cpmCalculator.views">Number of views</label>
+                                <input type="number" id="viewsInput" min="0" placeholder="Enter number of views">
+                            </div>
+                            
+                            <button id="calculateButton" class="calculate-button">
+                                <span data-i18n="cpmCalculator.calculate">Calculate</span>
+                            </button>
+                            
+                            <div class="calculator-result">
+                                <div class="result-wrapper">
+                                    <div class="result-value">$0.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="final-cta">
             <div class="final-cta-content">
                 <h2 data-i18n="finalCta.influencer.title">BECOME A STORM TRADE INFLUENCER TODAY!</h2>
@@ -287,7 +381,7 @@
                 <div class="response-time-wrapper">
                     <div class="response-time">
                         <i class="fas fa-clock"></i>
-                        <span>All applications are carefully reviewed within 24-48 hours by our dedicated team to ensure the best match for our community.</span>
+                        <span data-i18n="application.reviewNote">All applications are carefully reviewed within 24-48 hours by our dedicated team to ensure the best match for our community.</span>
                     </div>
                 </div>
             </div>

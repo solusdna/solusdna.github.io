@@ -350,4 +350,60 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', handleScroll);
     handleScroll(); 
+
+    function initCPMCalculator() {
+        const roleSelect = document.getElementById('roleSelect');
+        const platformSelect = document.getElementById('platformSelect');
+        const contentSelect = document.getElementById('contentSelect');
+        const viewsInput = document.getElementById('viewsInput');
+        const calculateButton = document.getElementById('calculateButton');
+        const resultValue = document.querySelector('.result-value');
+        const calculatorResult = document.querySelector('.calculator-result');
+
+        const platformRates = {
+            twitter: 10,
+            telegram: 25,
+            youtube: 50
+        };
+
+        function updateContentOptions() {
+            const selectedRole = roleSelect.value;
+            const categories = categoryData[selectedRole].categories;
+            
+            contentSelect.innerHTML = categories.map(cat => `
+                <option value="${cat.ratio}">
+                    ${i18n.t(`potentialRewards.categories.${cat.name}`)}
+                </option>
+            `).join('');
+        }
+
+        function calculateReward() {
+            const roleMultiplier = {
+                'explorers': 1,
+                'connectors': 2,
+                'masterminds': 3.2
+            }[roleSelect.value];
+
+            const platformRate = platformRates[platformSelect.value];
+            const contentRatio = parseFloat(contentSelect.value);
+            const views = parseInt(viewsInput.value) || 0;
+            
+            const reward = (views / 1000) * platformRate * roleMultiplier * contentRatio;
+            
+            calculatorResult.classList.remove('show');
+            setTimeout(() => {
+                resultValue.textContent = `$${reward.toFixed(2)}`;
+                calculatorResult.classList.add('show');
+            }, 100);
+        }
+
+        roleSelect.addEventListener('change', updateContentOptions);
+        calculateButton.addEventListener('click', calculateReward);
+
+        // Инициализация при загрузке
+        updateContentOptions();
+    }
+
+
+    initCPMCalculator();
 });

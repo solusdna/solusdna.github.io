@@ -1530,3 +1530,318 @@
         font-size: 0.9rem;
     }
 }
+
+.cpm-calculator {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(142, 233, 111, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(142, 233, 111, 0.1);
+}
+
+.calculator-header h2 {
+    color: #8EE96F;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.custom-select {
+    position: relative;
+    background: rgba(20, 23, 26, 0.7);
+    border: 1px solid rgba(142, 233, 111, 0.2);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.custom-select select {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-select::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #8EE96F;
+    border-bottom: 2px solid #8EE96F;
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.custom-select:hover {
+    border-color: rgba(142, 233, 111, 0.4);
+    background: rgba(142, 233, 111, 0.05);
+}
+
+.custom-select select option {
+    background: rgba(20, 23, 26, 0.95);
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+}
+
+#viewsInput {
+    width: 100%;
+    padding: 16px;
+    background: rgba(20, 23, 26, 0.7);
+    border: 1px solid rgba(142, 233, 111, 0.2);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+    appearance: textfield;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+#viewsInput::-webkit-outer-spin-button,
+#viewsInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#viewsInput:hover {
+    border-color: rgba(142, 233, 111, 0.4);
+    background: rgba(142, 233, 111, 0.05);
+}
+
+#viewsInput:focus {
+    border-color: rgba(142, 233, 111, 0.4);
+    background: rgba(142, 233, 111, 0.05);
+}
+
+.calculate-button {
+    width: 100%;
+    background: linear-gradient(135deg, #8EE96F 0%, #5CB350 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.calculate-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(142, 233, 111, 0.2);
+}
+
+.calculator-result {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.calculator-result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result-wrapper {
+    background: rgba(142, 233, 111, 0.1);
+    border: 2px solid #8EE96F;
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.result-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(142, 233, 111, 0.1), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.result-value {
+    color: #8EE96F;
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.potential-rewards-section {
+    padding: 60px 0;
+}
+
+.rewards-container {
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: start;
+}
+
+.rewards-info {
+    flex: 1;
+    text-align: left;
+    padding-top: 40px;
+    max-width: 600px;
+}
+
+.section-title {
+    font-size: 56px;
+    background: linear-gradient(135deg, #8EE96F 0%, #5CB350 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.section-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 480px;
+}
+
+.rewards-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px 32px;
+    background: rgba(20, 23, 26, 0.7);
+    border: 1px solid rgba(142, 233, 111, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 600px;
+}
+
+.feature-item:hover {
+    background: rgba(142, 233, 111, 0.08);
+    transform: translateX(5px);
+}
+
+.feature-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background: rgba(142, 233, 111, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon-wrapper i {
+    color: #8EE96F;
+    font-size: 24px;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-content h3 {
+    color: #8EE96F;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.feature-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.calculator-container {
+    position: sticky;
+    top: 40px;
+}
+
+@media (max-width: 1024px) {
+    .rewards-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .calculator-container {
+        position: static;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
+    .rewards-info {
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .section-description {
+        margin: 0 auto 40px;
+    }
+
+    .rewards-features {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .feature-item {
+        justify-content: center;
+    }
+

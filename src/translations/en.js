@@ -238,5 +238,47 @@ export const en = {
       cpmRatioPrefix: "CPM Ratio:",
       impressions: "per 1000 impressions"
     }
+  },
+  cpmCalculator: {
+    title: "CPM Calculator",
+    description: "Calculate potential rewards based on your role, content type and number of views",
+    selectRole: "Select your role",
+    selectContent: "Select content type",
+    views: "Number of views",
+    estimatedReward: "Estimated reward",
+    calculate: "Calculate",
+    result: "Result",
+    selectPlatform: "Select platform"
+  },
+  potentialRewards: {
+    title: "Potential Rewards",
+    description: "Earn rewards for creating high-quality content and growing your audience",
+    cards: {
+      roleMultipliers: {
+        title: "Role Multipliers",
+        description: "Explorer (1x) → Connector (2x) → Mastermind (3.2x)"
+      },
+      contentTypes: {
+        title: "Content Types",
+        description: "Different content types offer varied CPM ratios from 0.8x to 1.5x"
+      },
+      platformRates: {
+        title: "Platform Rates",
+        description: "X: $10 CPM • Telegram: $25 CPM • YouTube: $50 CPM"
+      }
+    },
+    categories: {
+      tokenOrientedContent: "Token Oriented Content",
+      platformContent: "Platform Content",
+      videoSharing: "Video Content",
+      news: "News",
+      narrativeShill: "Narrative Shill",
+      deepAnalysis: "Deep Analysis",
+      stormTradeAcademy: "StormTrade Academy",
+      tradingCompetitions: "Trading Competitions"
+    }
+  },
+  application: {
+    reviewNote: "All applications are carefully reviewed within 24-48 hours by our dedicated team to ensure the best match for our community."
   }
 };

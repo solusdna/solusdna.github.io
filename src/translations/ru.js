@@ -238,5 +238,47 @@ export const ru = {
       cpmRatioPrefix: "Коэффициент CPM:",
       impressions: "за 1000 показов"
     }
+  },
+  cpmCalculator: {
+    title: "Калькулятор CPM",
+    description: "Рассчитайте потенциальное вознаграждение на основе вашего уровня, типа контента и количества просмотров",
+    selectRole: "Выберите вашу роль",
+    selectContent: "Выберите тип контента",
+    views: "Количество просмотров",
+    estimatedReward: "Предполагаемое вознаграждение",
+    calculate: "Рассчитать",
+    result: "Результат",
+    selectPlatform: "Выберите платформу"
+  },
+  potentialRewards: {
+    title: "Потенциальные награды",
+    description: "Зарабатывайте награды за создание контента и расширение аудитории",
+    cards: {
+      roleMultipliers: {
+        title: "Множители ролей",
+        description: "Explorer (1x) → Connector (2x) → Mastermind (3.2x)"
+      },
+      contentTypes: {
+        title: "Типы контента",
+        description: "Разные типы контента имеют различные коэффициенты CPM от 0.8x до 1.5x"
+      },
+      platformRates: {
+        title: "CPM платформ",
+        description: "X: $10 CPM • Telegram: $25 CPM • YouTube: $50 CPM"
+      }
+    },
+    categories: {
+      tokenOrientedContent: "Контент о токенах",
+      platformContent: "Контент о платформе",
+      videoSharing: "Видео контент",
+      news: "Новости",
+      narrativeShill: "Нарративный шилл",
+      deepAnalysis: "Глубокий анализ",
+      stormTradeAcademy: "Академия StormTrade",
+      tradingCompetitions: "Торговые соревнования"
+    }
+  },
+  application: {
+    reviewNote: "Все заявки тщательно рассматриваются нашей командой в течение 24-48 часов, чтобы обеспечить наилучшее соответствие для нашего сообщества."
   }
 };
