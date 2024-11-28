@@ -245,6 +245,16 @@ export const en = {
       },
       cpmRatioPrefix: "CPM Ratio:",
       impressions: "per 1000 impressions"
+    },
+    contentDescriptions: {
+      tokenOrientedContent: "Creating content focused on the Storm Trade token: its value, functions, potential, and use cases.",
+      platformContent: "Highlighting the advantages and features of the Storm Trade platform, its capabilities for traders and investors.",
+      videoSharing: "Posting official Storm Trade videos with a brief caption.",
+      news: "Timely coverage of Storm Trade news: updates, partnerships, and key events.",
+      narrativeShill: "Creative promotion of Storm Trade through personal stories, platform experiences, and success cases.",
+      deepAnalysis: "In-depth market analysis and positioning of Storm Trade among competitors to emphasize its uniqueness.",
+      stormTradeAcademy: "Educational content for users: guides, tips, and training materials on trading with StormTrade.",
+      tradingCompetitions: "Coverage of trade competitions and events to boost engagement and attract users to the platform."
     }
   },
   cpmCalculator: {
@@ -252,12 +262,12 @@ export const en = {
     description: "Calculate potential rewards based on your role, content type and number of views",
     selectRole: "Select your role",
     selectContent: "Select content type",
-    views: "Number of views",
+    views: "Number views",
     estimatedReward: "Estimated reward",
     calculate: "Calculate",
     result: "Result",
     selectPlatform: "Select platform",
-    worksPerMonth: "Number of works per month"
+    worksPerMonth: "Number of works"
   },
   potentialRewards: {
     title: "Potential Rewards",

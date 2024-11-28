@@ -274,8 +274,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="categories-list">
                                 ${data.categories.map(cat => `
                                     <div class="category-item">
-                                        <span class="category-name" data-i18n="taskboard.table.categories.${cat.name}">${cat.name}</span>
-                                        <span class="category-ratio"><span data-i18n="taskboard.table.cpmRatioPrefix">CPM Ratio:</span> ×${cat.ratio}</span>
+                                        <div class="category-header">
+                                            <span class="category-name" data-i18n="taskboard.table.categories.${cat.name}">${cat.name}</span>
+                                            <span class="category-ratio"><span data-i18n="taskboard.table.cpmRatioPrefix">CPM Ratio:</span> ×${cat.ratio}</span>
+                                        </div>
+                                        <div class="category-description">
+                                            <p data-i18n="taskboard.contentDescriptions.${cat.name}"></p>
+                                        </div>
                                     </div>
                                 `).join('')}
                             </div>
@@ -373,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             contentSelect.innerHTML = categories.map(cat => `
                 <option value="${cat.ratio}">
-                    ${i18n.t(`potentialRewards.categories.${cat.name}`)}
+                    ${i18n.t(`taskboard.table.categories.${cat.name}`)}
                 </option>
             `).join('');
         }
@@ -387,11 +392,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const platformRate = platformRates[platformSelect.value];
             const contentRatio = parseFloat(contentSelect.value);
-            const views = parseInt(viewsInput.value) || 0;
+            const totalMonthlyViews = parseInt(viewsInput.value) || 0;
             const worksPerMonth = parseInt(worksPerMonthInput.value.replace(/[^0-9]/g, '')) || 1;
             
-            const rewardPerWork = (views / 1000) * platformRate * roleMultiplier * contentRatio;
-            const totalReward = rewardPerWork * worksPerMonth;
+            const totalReward = (totalMonthlyViews / 1000) * platformRate * roleMultiplier * contentRatio;
             
             calculatorResult.classList.remove('show');
             setTimeout(() => {
