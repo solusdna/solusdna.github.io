@@ -381,6 +381,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${i18n.t(`taskboard.table.categories.${cat.name}`)}
                 </option>
             `).join('');
+            
+            i18n.translate();
         }
 
         function calculateReward() {
@@ -403,6 +405,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 calculatorResult.classList.add('show');
             }, 100);
         }
+
+        // Добавляем слушатель события смены языка
+        document.addEventListener('languageChanged', () => {
+            updateContentOptions();
+        });
 
         roleSelect.addEventListener('change', updateContentOptions);
         calculateButton.addEventListener('click', calculateReward);

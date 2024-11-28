@@ -38,6 +38,8 @@ class I18n {
         elements.forEach(el => {
             el.style.opacity = '1';
         });
+
+        document.dispatchEvent(new CustomEvent('languageChanged'));
     }, 300);
   }
 
