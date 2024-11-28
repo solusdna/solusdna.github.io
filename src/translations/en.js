@@ -124,6 +124,10 @@ export const en = {
       req1: "Create a minimum of 5 content units with a CPM Ratio of at least 85%",
       req2: "Invite at least 7 users to the Storm Trade platform",
       req3: "Rank in the top 10 of the leaderboard",
+      fastUpgrade: {
+        title: "Fast Upgrade",
+        description: "Instantly upgrade to Connector by successfully inviting 3 new influencers to join the program"
+      },
       task1: "Create in-depth analysis and posts",
       task2: "Provide feedback on program features",
       task3: "Invite other users to join Storm Trade",
@@ -137,6 +141,10 @@ export const en = {
       req1: "Create a minimum of 12 content units with a CPM Ratio of at least 85%",
       req2: "Invite at least 15 users to Storm Trade",
       req3: "Rank in the top 5 of the leaderboard",
+      fastUpgrade: {
+        title: "Fast Upgrade",
+        description: "Instantly upgrade to Mastermind by successfully inviting 10 new influencers to join the program"
+      },
       task1: "Develop and lead marketing campaigns",
       task2: "Represent Storm Trade at local events",
       task3: "Mentor new participants",
