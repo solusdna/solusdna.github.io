@@ -248,7 +248,8 @@ export const ru = {
     estimatedReward: "Предполагаемое вознаграждение",
     calculate: "Рассчитать",
     result: "Результат",
-    selectPlatform: "Выберите платформу"
+    selectPlatform: "Выберите платформу",
+    worksPerMonth: "Количество работ в месяц"
   },
   potentialRewards: {
     title: "Потенциальные награды",

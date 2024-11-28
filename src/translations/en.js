@@ -248,7 +248,8 @@ export const en = {
     estimatedReward: "Estimated reward",
     calculate: "Calculate",
     result: "Result",
-    selectPlatform: "Select platform"
+    selectPlatform: "Select platform",
+    worksPerMonth: "Number of works per month"
   },
   potentialRewards: {
     title: "Potential Rewards",

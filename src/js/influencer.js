@@ -356,6 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const platformSelect = document.getElementById('platformSelect');
         const contentSelect = document.getElementById('contentSelect');
         const viewsInput = document.getElementById('viewsInput');
+        const worksPerMonthInput = document.getElementById('worksPerMonthInput');
         const calculateButton = document.getElementById('calculateButton');
         const resultValue = document.querySelector('.result-value');
         const calculatorResult = document.querySelector('.calculator-result');
@@ -387,12 +388,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const platformRate = platformRates[platformSelect.value];
             const contentRatio = parseFloat(contentSelect.value);
             const views = parseInt(viewsInput.value) || 0;
+            const worksPerMonth = parseInt(worksPerMonthInput.value.replace(/[^0-9]/g, '')) || 1;
             
-            const reward = (views / 1000) * platformRate * roleMultiplier * contentRatio;
+            const rewardPerWork = (views / 1000) * platformRate * roleMultiplier * contentRatio;
+            const totalReward = rewardPerWork * worksPerMonth;
             
             calculatorResult.classList.remove('show');
             setTimeout(() => {
-                resultValue.textContent = `$${reward.toFixed(2)}`;
+                resultValue.textContent = `$${totalReward.toFixed(2)}`;
                 calculatorResult.classList.add('show');
             }, 100);
         }
