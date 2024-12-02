@@ -267,7 +267,8 @@ export const en = {
     calculate: "Calculate",
     result: "Result",
     selectPlatform: "Select platform",
-    worksPerMonth: "Number of works"
+    worksPerMonth: "Number of works",
+    estimatedNote: "Estimated Reward: The final amount will be determined after the review of your contributions."
   },
   potentialRewards: {
     title: "Potential Rewards",

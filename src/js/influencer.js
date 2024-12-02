@@ -418,6 +418,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Инициализация при загрузке
         updateContentOptions();
+
+        // Добавляем обработчик клавиши Enter
+        const handleEnterKey = (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                calculateReward();
+            }
+        };
+
+        // Добавляем слушатели событий для полей ввода
+        viewsInput.addEventListener('keypress', handleEnterKey);
+        worksPerMonthInput.addEventListener('keypress', handleEnterKey);
     }
 
 

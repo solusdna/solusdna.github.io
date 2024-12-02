@@ -267,7 +267,8 @@ export const ru = {
     calculate: "Рассчитать",
     result: "Результат",
     selectPlatform: "Выберите платформу",
-    worksPerMonth: "Количество работ"
+    worksPerMonth: "Количество работ",
+    estimatedNote: "Ожидаемое вознаграждение: Окончательная сумма будет определена после проверки ваших публикаций."
   },
   potentialRewards: {
     title: "Потенциальные награды",
