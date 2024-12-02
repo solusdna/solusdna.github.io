@@ -397,7 +397,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const totalMonthlyViews = parseInt(viewsInput.value) || 0;
             const worksPerMonth = parseInt(worksPerMonthInput.value.replace(/[^0-9]/g, '')) || 1;
             
-            const totalReward = (totalMonthlyViews / 1000) * platformRate * roleMultiplier * contentRatio;
+            const totalViews = totalMonthlyViews * worksPerMonth;
+            
+            const totalReward = (totalViews / 1000) * platformRate * roleMultiplier * contentRatio;
             
             calculatorResult.classList.remove('show');
             setTimeout(() => {
