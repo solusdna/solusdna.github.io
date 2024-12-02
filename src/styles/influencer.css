@@ -1686,15 +1686,17 @@
 }
 
 .calculator-result {
-    margin-top: 20px;
+    height: 0;
+    margin-top: 0;
     opacity: 0;
-    transform: translateY(10px);
+    overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .calculator-result.show {
+    height: auto;
+    margin-top: 20px;
     opacity: 1;
-    transform: translateY(0);
 }
 
 .result-wrapper {
