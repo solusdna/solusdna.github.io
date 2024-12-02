@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 100);
         }
 
-        // Добавляем слушатель события смены языка
+
         document.addEventListener('languageChanged', () => {
             updateContentOptions();
         });
@@ -416,10 +416,10 @@ document.addEventListener('DOMContentLoaded', () => {
         roleSelect.addEventListener('change', updateContentOptions);
         calculateButton.addEventListener('click', calculateReward);
 
-        // Инициализация при загрузке
+
         updateContentOptions();
 
-        // Добавляем обработчик клавиши Enter
+
         const handleEnterKey = (e) => {
             if (e.key === 'Enter') {
                 e.preventDefault();
@@ -427,7 +427,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Добавляем слушатели событий для полей ввода
         viewsInput.addEventListener('keypress', handleEnterKey);
         worksPerMonthInput.addEventListener('keypress', handleEnterKey);
     }
