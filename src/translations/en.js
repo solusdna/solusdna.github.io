@@ -89,8 +89,15 @@ export const en = {
       title: "Level 3: Sensei",
       description: "Having earned recognition in the community for their contributions, Senseis guide others with their expertise and foster a positive community environment.",
       req1: "Active participation and interaction in official Storm Trade communities",
-      req2: "Complete at least 25 pieces of content in Master role within 4 weeks",
-      req3: "The percentage of successfully completed tasks is at least 80%",
+      req2: {
+        part1: "Complete at least 5 pieces of content in Master role within 4 weeks in",
+        part2: "section"
+      },
+      req3: {
+        part1: "Complete at least 14 activity tasks in Master role within 4 weeks in",
+        part2: "section"
+      },
+      req4: "The percentage of successfully completed tasks is at least 80%",
       benefit1: "Opportunity to earn rewards for your contributions as an official Storm Trade ambassador",
       benefit2: "Unique role on Storm Trade community"
     },
