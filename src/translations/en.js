@@ -405,64 +405,143 @@ export const en = {
   },
   faq: {
     title: "Frequently Asked Questions",
-    description: "Find answers to common questions about the Storm Trade Influencer Program",
-    questions: {
+    influencer: {
+      description: "Find answers to common questions about the Storm Trade Influencer Program",
+      questions: {
         q1: {
-            question: "Is there a specific requirement for how many posts I should publish per week?",
-            answer: "No, there is no set requirement for weekly post frequency. You have the flexibility to publish as many posts as you wish per week."
+          question: "Is there a specific requirement for how many posts I should publish per week?",
+          answer: "No, there is no set requirement for weekly post frequency. You have the flexibility to publish as many posts as you wish per week."
         },
         q2: {
-            question: "What are the main objectives for ambassadors?",
-            answer: "The primary focus is on attracting traders and increasing trading volume. The team will periodically provide specific topics and themes for posts based on current priorities and initiatives."
+          question: "What are the main objectives for ambassadors?",
+          answer: "The primary focus is on attracting traders and increasing trading volume. The team will periodically provide specific topics and themes for posts based on current priorities and initiatives."
         },
         q3: {
-            question: "How and who will be responsible for distributing rewards?",
-            answer: "The team will handle all reward distributions directly."
+          question: "How and who will be responsible for distributing rewards?",
+          answer: "The team will handle all reward distributions directly."
         },
         q4: {
-            question: "Who will be responsible for evaluating the content?",
-            answer: "The Solus Group team will be responsible for all content evaluation."
+          question: "Who will be responsible for evaluating the content?",
+          answer: "The Solus Group team will be responsible for all content evaluation."
         },
         q5: {
-            question: "How can I find out what type of content to create?",
-            answer: "Navigate to the \"Tasks And Evaluation\" section, select your role, and you will see a list of available tasks for your level. Hover over any task to view its detailed description."
+          question: "How can I find out what type of content to create?",
+          answer: "Navigate to the \"Tasks And Evaluation\" section, select your role, and you will see a list of available tasks for your level. Hover over any task to view its detailed description."
         },
         q6: {
-            question: "How does the CPM calculator work?",
-            answer: "To use the CPM calculator:\n1. Select your level\n2. Choose your preferred platform\n3. Select the task type\n4. Enter your estimated views per post\n5. Input your planned number of monthly posts\n6. Click \"Calculate\" to see your projected results"
+          question: "How does the CPM calculator work?",
+          answer: "To use the CPM calculator:\n1. Select your level\n2. Choose your preferred platform\n3. Select the task type\n4. Enter your estimated views per post\n5. Input your planned number of monthly posts\n6. Click \"Calculate\" to see your projected results"
         },
         q7: {
-            question: "After submitting my application, how long should I wait for a response?",
-            answer: "All applications are reviewed within 24-48 hours. If you are successfully selected as an ambassador, you will receive an invitation to join the private group."
+          question: "After submitting my application, how long should I wait for a response?",
+          answer: "All applications are reviewed within 24-48 hours. If you are successfully selected as an ambassador, you will receive an invitation to join the private group."
         },
         q8: {
-            question: "Where should I submit my completed content?",
-            answer: "All completed content should be submitted to the designated thread in the Telegram channel."
+          question: "Where should I submit my completed content?",
+          answer: "All completed content should be submitted to the designated thread in the Telegram channel."
         },
         q9: {
-            question: "How are referrals tracked in the ambassador program?",
-            answer: "For a referral to be properly attributed to you, the referred person must include your username or community name when filling out their application form."
+          question: "How are referrals tracked in the ambassador program?",
+          answer: "For a referral to be properly attributed to you, the referred person must include your username or community name when filling out their application form."
         },
         q10: {
-            question: "How can I get my personal referral link for the Storm Trade platform?",
-            answer: "You will receive your personal referral link after joining the Telegram community."
+          question: "How can I get my personal referral link for the Storm Trade platform?",
+          answer: "You will receive your personal referral link after joining the Telegram community."
         },
         q11: {
-            question: "How often is content evaluated and rewards distributed?",
-            answer: "Content is evaluated monthly, with results published in a leaderboard that will be announced both in the Telegram community and on the website."
+          question: "How often is content evaluated and rewards distributed?",
+          answer: "Content is evaluated monthly, with results published in a leaderboard that will be announced both in the Telegram community and on the website."
         },
         q12: {
-            question: "Where can I view the leaderboard?",
-            answer: "The leaderboard is published at the beginning of each working month, displaying performance metrics for the previous month. An announcement will be made when the leaderboard becomes available."
+          question: "Where can I view the leaderboard?",
+          answer: "The leaderboard is published at the beginning of each working month, displaying performance metrics for the previous month. An announcement will be made when the leaderboard becomes available."
         },
         q13: {
-            question: "My rewards differ from what the CPM calculator showed. Why is this?",
-            answer: "The CPM calculator provides approximate results based on the metrics you enter. All content is additionally reviewed manually by the team, which may affect final reward amounts."
+          question: "My rewards differ from what the CPM calculator showed. Why is this?",
+          answer: "The CPM calculator provides approximate results based on the metrics you enter. All content is additionally reviewed manually by the team, which may affect final reward amounts."
         },
         q14: {
-            question: "I've received an invitation and joined the group. Can I start creating content right away?",
-            answer: "Yes, you can begin creating content immediately after joining."
+          question: "I've received an invitation and joined the group. Can I start creating content right away?",
+          answer: "Yes, you can begin creating content immediately after joining."
         }
+      }
+    },
+    advocate: {
+      description: "Find answers to common questions about the Storm Trade Advocate Program",
+      questions: {
+        q1: {
+          question: "How can I participate in the program as an Advocate?",
+          answer: "To become an Advocate in the Storm Trade Ambassador Program, join the Zealy campaign and complete the available sections."
+        },
+        q2: {
+          question: "When can I start earning rewards for my contributions?",
+          answer: "You will be eligible to receive rewards for your contributions after reaching Level 3: Sensei."
+        },
+        q3: {
+          question: "What is the primary responsibility of Advocates?",
+          answer: "The main responsibility is being active and providing assistance in official Storm Trade groups."
+        },
+        q4: {
+          question: "What kind of activity is expected to progress in the program?",
+          answer: "You should:\n- Engage with users\n- Provide accurate responses to questions\n- Mention administrators when server rules are violated\n- Show initiative in community participation"
+        },
+        q5: {
+          question: "I've reached Level 2. When can I expect the form for Level 3 promotion?",
+          answer: "The Level 3 application form opens approximately monthly and will be announced in the Telegram community."
+        },
+        q6: {
+          question: "After submitting my Level 3 application, when will I receive a response?",
+          answer: "All applications are reviewed by our team within 24-48 hours. Successful Level 3 candidates will be announced in the Telegram community."
+        },
+        q7: {
+          question: "How are rewards calculated for program contributions?",
+          answer: "Your rewards will be calculated based on your position in both the Zealy leaderboard and website rankings after reaching Level 3."
+        },
+        q8: {
+          question: "How often are rewards distributed?",
+          answer: "Rewards are distributed monthly based on your activity and contributions to the community."
+        },
+        q9: {
+          question: "What platforms does the Storm Trade Advocates Program use?",
+          answer: "The primary platform for completing tasks is Zealy, while community engagement and updates happen in the official Telegram group."
+        },
+        q10: {
+          question: "What is the main reward system for the Advocates Program?",
+          answer: "Advocates earn $STORM tokens distributed monthly based on their activity and contributions, with increased rewards available after achieving the Sensei role."
+        },
+        q11: {
+          question: "Can I participate if I'm new to trading?",
+          answer: "Yes! The program welcomes all participants, whether new or experienced, as long as they are passionate about the Storm Trade community and eager to contribute."
+        },
+        q12: {
+          question: "How long does it take to progress to Sensei Level?",
+          answer: "The time required varies depending on your activity and task completion. Most participants reach Sensei Level within 2-3 months of consistent engagement."
+        },
+        q13: {
+          question: "What makes a Grandmaster Level Advocate unique?",
+          answer: "Grandmasters are community leaders who demonstrate exceptional contributions, including mentoring others, promoting Storm Trade, and fostering a positive environment."
+        },
+        q14: {
+          question: "What happens if I don't complete tasks on time?",
+          answer: "Incomplete tasks may delay your progression to the next level, but you can always reattempt them and maintain your activity to stay in the program."
+        },
+        q15: {
+          question: "Are there specific guidelines for content creation?",
+          answer: "Yes, all content must align with Storm Trade's branding and values. Detailed content creation guidelines are available in the Advocate's handbook, accessible on Zealy."
+        },
+        q16: {
+          question: "Can I suggest ideas or improvements for the Program?",
+          answer: "Absolutely! Advocates are encouraged to share ideas and feedback in the official Telegram community or directly with program coordinators."
+        },
+        q17: {
+          question: "Are there team-based tasks in the Program?",
+          answer: "Yes, some tasks encourage collaboration among Advocates, such as hosting events or creating educational materials together."
+        },
+        q18: {
+          question: "How can I track my rewards and progress?",
+          answer: "Rewards and progress can be tracked through the Zealy leaderboard and the Advocate's dashboard on the Storm Trade website, updated monthly."
+        }
+      }
     }
   }
 };
