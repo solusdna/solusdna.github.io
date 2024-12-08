@@ -153,8 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
             baseCPM: '1x',
             categories: [
                 { name: 'tokenOrientedContent', ratio: 1 },
-                { name: 'videoSharing', ratio: 0.8 },
-                { name: 'news', ratio: 0.8 }
+                { name: 'videoSharing', ratio: 1.2 },
+                { name: 'news', ratio: 1 },
+                { name: 'entertainment', ratio: 0.8 }
             ]
         },
         connectors: {
@@ -162,10 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
             categories: [
                 { name: 'tokenOrientedContent', ratio: 1 },
                 { name: 'platformContent', ratio: 1 },
-                { name: 'videoSharing', ratio: 0.8 },
-                { name: 'news', ratio: 0.8 },
+                { name: 'videoSharing', ratio: 1.2 },
+                { name: 'news', ratio: 1 },
                 { name: 'narrativeShill', ratio: 1.2 },
-                { name: 'deepAnalysis', ratio: 1.5 }
+                { name: 'deepAnalysis', ratio: 1.5 },
+                { name: 'entertainment', ratio: 0.8 }
             ]
         },
         masterminds: {
@@ -173,12 +175,13 @@ document.addEventListener('DOMContentLoaded', () => {
             categories: [
                 { name: 'tokenOrientedContent', ratio: 1 },
                 { name: 'platformContent', ratio: 1 },
-                { name: 'videoSharing', ratio: 0.8 },
-                { name: 'news', ratio: 0.8 },
+                { name: 'videoSharing', ratio: 1.2 },
+                { name: 'news', ratio: 1 },
                 { name: 'narrativeShill', ratio: 1.2 },
                 { name: 'deepAnalysis', ratio: 1.5 },
                 { name: 'stormTradeAcademy', ratio: 1.2 },
-                { name: 'tradingCompetitions', ratio: 1.2 }
+                { name: 'tradingCompetitions', ratio: 1.2 },
+                { name: 'entertainment', ratio: 0.8 }
             ]
         }
     };
@@ -249,18 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = categoryData[category];
             if (!data) return;
             
-            
-            if (tableContent.children.length) {
-                tableContent.children[0].style.opacity = '0';
-                tableContent.children[0].style.transform = 'translateY(10px)';
-                setTimeout(() => {
-                    tableContent.innerHTML = '';
-                    renderNewContent();
-                }, 300);
-            } else {
-                renderNewContent();
-            }
-            
             function renderNewContent() {
                 const content = `
                     <div class="content-row">
@@ -276,10 +267,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <div class="category-item">
                                         <div class="category-header">
                                             <span class="category-name" data-i18n="taskboard.table.categories.${cat.name}">${cat.name}</span>
-                                            <span class="category-ratio"><span data-i18n="taskboard.table.cpmRatioPrefix">CPM Ratio:</span> ×${cat.ratio}</span>
+                                            <span class="category-ratio">CPM Ratio: ×${cat.ratio}</span>
                                         </div>
                                         <div class="category-description">
-                                            <p data-i18n="taskboard.contentDescriptions.${cat.name}"></p>
+                                            <div class="category-main">
+                                                <p class="description">${renderFormattedDescription(cat.name)}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 `).join('')}
@@ -322,11 +315,35 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                 `;
+                
                 tableContent.innerHTML = content;
                 i18n.translate();
+                
+                document.querySelectorAll('.category-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        document.querySelectorAll('.category-item.active').forEach(openItem => {
+                            if (openItem !== item) {
+                                openItem.classList.remove('active');
+                            }
+                        });
+                        
+                        item.classList.toggle('active');
+                    });
+                });
+            }
+            
+            if (tableContent.children.length) {
+                tableContent.children[0].style.opacity = '0';
+                tableContent.children[0].style.transform = 'translateY(10px)';
+                setTimeout(() => {
+                    tableContent.innerHTML = '';
+                    renderNewContent();
+                }, 300);
+            } else {
+                renderNewContent();
             }
         }
-
+        
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
                 tabButtons.forEach(btn => btn.classList.remove('active'));
@@ -335,11 +352,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        
+        // Рендерим начальную категорию
         renderCategory('explorers');
     }
 
-    
     initCPMTable();
 
     const handleScroll = () => {
@@ -434,3 +450,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCPMCalculator();
 });
+
+function renderFormattedDescription(category) {
+    const description = i18n.getTranslation(`taskboard.contentDescriptions.${category}`);
+    if (!description) return '';
+
+    return `
+        <div class="category-content">
+            <div class="category-main">
+                <p class="description">${description.description}</p>
+                <div class="conditions">
+                    <h4>${description.conditions.title}</h4>
+                    <ul>
+                        <li>${description.conditions.item1}</li>
+                        <li>${description.conditions.item2}</li>
+                        <li>${description.conditions.item3}</li>
+                        <li>${description.conditions.item4}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    `;
+}

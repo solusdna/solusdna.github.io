@@ -250,20 +250,112 @@ export const en = {
         narrativeShill: "Narrative Shill",
         deepAnalysis: "Deep Analysis",
         stormTradeAcademy: "StormTrade Academy",
-        tradingCompetitions: "Trading Competitions"
+        tradingCompetitions: "Trading Competitions",
+        entertainment: "Entertainment"
       },
       cpmRatioPrefix: "CPM Ratio:",
       impressions: "per 1000 impressions"
     },
     contentDescriptions: {
-      tokenOrientedContent: "Creating content focused on the Storm Trade token: its value, functions, potential, and use cases.",
-      platformContent: "Highlighting the advantages and features of the Storm Trade platform, its capabilities for traders and investors.",
-      videoSharing: "Posting official Storm Trade videos with a brief caption.",
-      news: "Timely coverage of Storm Trade news: updates, partnerships, and key events.",
-      narrativeShill: "Creative promotion of Storm Trade through personal stories, platform experiences, and success cases.",
-      deepAnalysis: "In-depth market analysis and positioning of Storm Trade among competitors to emphasize its uniqueness.",
-      stormTradeAcademy: "Educational content for users: guides, tips, and training materials on trading with StormTrade.",
-      tradingCompetitions: "Coverage of trade competitions and events to boost engagement and attract users to the platform."
+      tokenOrientedContent: {
+        title: "Token Oriented Content",
+        description: "Emphasize the $STORM token's value, functionality, potential and diverse use cases through targeted communications.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Motivate audience to buy STORM and participate in staking/farming",
+          item2: "Share key milestones: IDO, TGE and buyback initiatives",
+          item3: "Discuss token utility and trading volume impact on value",
+          item4: "Provide technical analysis and substantiated price predictions"
+        }
+      },
+      platformContent: {
+        title: "Platform Oriented Content",
+        description: "Highlight Storm Trade platform's professional trading capabilities and benefits.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Showcase trading conditions and professional tools",
+          item2: "Share platform improvements and trading metrics",
+          item3: "Emphasize practical user benefits",
+          item4: "Support content with current statistics and data"
+        }
+      },
+      videoSharing: {
+        title: "Video Sharing",
+        description: "Effectively share Storm Trade official video content to maximize viewer engagement.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Highlight key features and new platform releases",
+          item2: "Create engaging video descriptions",
+          item3: "Add clear calls-to-action",
+          item4: "Actively engage with viewer comments"
+        }
+      },
+      news: {
+        title: "News",
+        description: "Deliver timely Storm Trade updates and developments to keep the community informed.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Share new features and platform improvements",
+          item2: "Announce new partnerships and integrations",
+          item3: "Cover significant achievements and events",
+          item4: "Maintain accuracy and timeliness in news coverage"
+        }
+      },
+      narrativeShill: {
+        title: "Narrative Shill",
+        description: "Share compelling success stories and real trading achievements to build platform confidence.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Showcase liquidity provider successes and growth metrics",
+          item2: "Highlight profitable trades with performance proof",
+          item3: "Promote tournament victories and referral benefits",
+          item4: "Support stories with visual proof: growth charts and statistics"
+        }
+      },
+      deepAnalysis: {
+        title: "Deep Analysis",
+        description: "Provide comprehensive market analysis positioning Storm Trade while highlighting competitive advantages.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Compare key features with competitors",
+          item2: "Demonstrate unique technical advantages",
+          item3: "Share data-backed platform superiority",
+          item4: "Present expert insights to build credibility"
+        }
+      },
+      stormTradeAcademy: {
+        title: "StormTrade Academy",
+        description: "Create educational content focused on mastering the Storm Trade platform while emphasizing learning and earning opportunities.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Create simple step-by-step guides and trading basics",
+          item2: "Share practical tips for beginner traders",
+          item3: "Highlight key courses and educational benefits",
+          item4: "Develop materials that motivate learning while showcasing earning potential"
+        }
+      },
+      tradingCompetitions: {
+        title: "Trading Competitions",
+        description: "Promote Storm Trade trading competitions to drive participation and showcase winning opportunities.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Detail prize pools, rules, and participation steps",
+          item2: "Share current rankings and competition progress",
+          item3: "Spotlight winners and highlight rewards",
+          item4: "Create excitement through regular updates"
+        }
+      },
+      entertainment: {
+        title: "Entertainment",
+        description: "Create engaging content to build Storm Trade community through fun, interactive elements.",
+        conditions: {
+          title: "Conditions:",
+          item1: "Share trading memes and relatable content",
+          item2: "Run contests and interactive challenges",
+          item3: "Feature reward games and winning opportunities",
+          item4: "Drive social engagement through calls-to-action"
+        }
+      }
     }
   },
   cpmCalculator: {
