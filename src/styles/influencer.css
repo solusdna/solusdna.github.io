@@ -2010,3 +2010,138 @@
     border-color: rgba(142, 233, 111, 0.2);
     transform: translateY(-2px);
 }
+
+.faq-section {
+    padding: 80px 0;
+    background: rgba(12, 14, 28, 0.5);
+    margin-top: 40px;
+}
+
+.faq-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-section .section-description {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    background: rgba(20, 23, 26, 0.7);
+    border: 1px solid rgba(142, 233, 111, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.faq-item:hover {
+    border-color: rgba(142, 233, 111, 0.2);
+    transform: translateY(-2px);
+}
+
+.faq-question {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    user-select: none;
+    border-bottom: 1px solid transparent;
+}
+
+.faq-question span {
+    flex: 1;
+    margin-right: 16px;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.faq-question i {
+    color: #8EE96F;
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.faq-item.active {
+    background: rgba(142, 233, 111, 0.05);
+    border-color: rgba(142, 233, 111, 0.3);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    padding: 16px 20px;
+}
+
+.faq-answer p {
+    margin: 0;
+    white-space: pre-line;
+    padding-left: 8px;
+    border-left: 2px solid rgba(142, 233, 111, 0.3);
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 576px) {
+    .faq-section {
+        padding: 40px 0;
+    }
+
+    .faq-grid {
+        gap: 16px;
+    }
+
+    .faq-question {
+        padding: 16px 20px;
+    }
+
+    .faq-question span {
+        font-size: 14px;
+    }
+
+    .faq-answer {
+        padding: 0 20px;
+        font-size: 13px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 20px 16px;
+    }
+}

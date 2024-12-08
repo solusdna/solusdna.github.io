@@ -4,6 +4,7 @@ export const en = {
     levels: "Levels",
     tasks: "Tasks",
     steps: "Steps",
+    faq: "FAQ",
     applyNow: "Apply Now",
     joinNow: "Join Now",
     advocates: "Advocates",
@@ -401,5 +402,67 @@ export const en = {
   },
   application: {
     reviewNote: "All applications are carefully reviewed within 24-48 hours by our dedicated team to ensure the best match for our community."
+  },
+  faq: {
+    title: "Frequently Asked Questions",
+    description: "Find answers to common questions about the Storm Trade Influencer Program",
+    questions: {
+        q1: {
+            question: "Is there a specific requirement for how many posts I should publish per week?",
+            answer: "No, there is no set requirement for weekly post frequency. You have the flexibility to publish as many posts as you wish per week."
+        },
+        q2: {
+            question: "What are the main objectives for ambassadors?",
+            answer: "The primary focus is on attracting traders and increasing trading volume. The team will periodically provide specific topics and themes for posts based on current priorities and initiatives."
+        },
+        q3: {
+            question: "How and who will be responsible for distributing rewards?",
+            answer: "The team will handle all reward distributions directly."
+        },
+        q4: {
+            question: "Who will be responsible for evaluating the content?",
+            answer: "The Solus Group team will be responsible for all content evaluation."
+        },
+        q5: {
+            question: "How can I find out what type of content to create?",
+            answer: "Navigate to the \"Tasks And Evaluation\" section, select your role, and you will see a list of available tasks for your level. Hover over any task to view its detailed description."
+        },
+        q6: {
+            question: "How does the CPM calculator work?",
+            answer: "To use the CPM calculator:\n1. Select your level\n2. Choose your preferred platform\n3. Select the task type\n4. Enter your estimated views per post\n5. Input your planned number of monthly posts\n6. Click \"Calculate\" to see your projected results"
+        },
+        q7: {
+            question: "After submitting my application, how long should I wait for a response?",
+            answer: "All applications are reviewed within 24-48 hours. If you are successfully selected as an ambassador, you will receive an invitation to join the private group."
+        },
+        q8: {
+            question: "Where should I submit my completed content?",
+            answer: "All completed content should be submitted to the designated thread in the Telegram channel."
+        },
+        q9: {
+            question: "How are referrals tracked in the ambassador program?",
+            answer: "For a referral to be properly attributed to you, the referred person must include your username or community name when filling out their application form."
+        },
+        q10: {
+            question: "How can I get my personal referral link for the Storm Trade platform?",
+            answer: "You will receive your personal referral link after joining the Telegram community."
+        },
+        q11: {
+            question: "How often is content evaluated and rewards distributed?",
+            answer: "Content is evaluated monthly, with results published in a leaderboard that will be announced both in the Telegram community and on the website."
+        },
+        q12: {
+            question: "Where can I view the leaderboard?",
+            answer: "The leaderboard is published at the beginning of each working month, displaying performance metrics for the previous month. An announcement will be made when the leaderboard becomes available."
+        },
+        q13: {
+            question: "My rewards differ from what the CPM calculator showed. Why is this?",
+            answer: "The CPM calculator provides approximate results based on the metrics you enter. All content is additionally reviewed manually by the team, which may affect final reward amounts."
+        },
+        q14: {
+            question: "I've received an invitation and joined the group. Can I start creating content right away?",
+            answer: "Yes, you can begin creating content immediately after joining."
+        }
+    }
   }
 };
