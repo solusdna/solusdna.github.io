@@ -449,6 +449,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     initCPMCalculator();
+
+    const slider = document.querySelector('.examples-slider');
+    const prevButton = document.querySelector('.prev-slide');
+    const nextButton = document.querySelector('.next-slide');
+
+    if (slider && prevButton && nextButton) {
+        prevButton.addEventListener('click', () => {
+            slider.scrollBy({
+                left: -380,
+                behavior: 'smooth'
+            });
+        });
+
+        nextButton.addEventListener('click', () => {
+            slider.scrollBy({
+                left: 380,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
 
 function renderFormattedDescription(category) {

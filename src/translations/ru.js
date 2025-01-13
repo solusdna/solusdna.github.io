@@ -215,7 +215,7 @@ export const ru = {
     },
     products: {
       title: "Продукты",
-      trading: "��орговое приложение",
+      trading: "Торговое приложение",
       miniApp: "Mini App",
       earn: "Заработок"
     },
@@ -326,7 +326,7 @@ export const ru = {
       },
       stormTradeAcademy: {
         title: "Академия StormTrade",
-        description: "Создание обучающего контента для освоения платформы Storm Trade с ак��ентом на возможности обучения и заработка.",
+        description: "Создание обучающего контента для освоения платформы Storm Trade с акцентом на возможности обучения и заработка.",
         conditions: {
           title: "Условия:",
           item1: "Создание простых пошаговых руководств и основ трейдинга",
@@ -543,5 +543,18 @@ export const ru = {
         }
       }
     }
+  },
+  examples: {
+    title: "Лучшие примеры работ",
+    description: "Ознакомьтесь с лучшими работами наших инфлюенсеров",
+    cards: {
+      rewardsSeason: "Принимаем участие в сезоне наград от Storm Trade",
+      leaderboard: "Лидерборд в котором ты будешь в топе",
+      academy: "Storm Академия",
+      fundamental: "Один из фундаментальных проектов на TON",
+      token: "STORM token—сердце экосистемы Storm Trade",
+      advocates: "Программа Storm Trade Advocates"
+    },
+    viewContent: "Посмотреть"
   }
 };

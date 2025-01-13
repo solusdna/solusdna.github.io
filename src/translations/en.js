@@ -359,6 +359,19 @@ export const en = {
       }
     }
   },
+  examples: {
+    title: "Best Content Examples",
+    description: "Check out some of the best content from our influencers",
+    cards: {
+      rewardsSeason: "Join Storm Trade Rewards Season",
+      leaderboard: "Top Traders Leaderboard",
+      academy: "Storm Academy",
+      fundamental: "One of the Fundamental Projects on TON",
+      token: "STORM token—the heart and soul of the Storm Trade ecosystem",
+      advocates: "Storm Trade Advocates Program"
+    },
+    viewContent: "View Content"
+  },
   cpmCalculator: {
     title: "CPM Calculator",
     description: "Calculate potential rewards based on your role, content type and number of views",
