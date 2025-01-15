@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
             
-            // Закрываем все остальные вопросы
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             
-            // Переключаем текущий вопрос
             if (!isActive) {
                 item.classList.add('active');
                 answer.style.maxHeight = answer.scrollHeight + 'px';

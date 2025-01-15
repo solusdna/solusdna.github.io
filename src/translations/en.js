@@ -357,6 +357,84 @@ export const en = {
           item4: "Drive social engagement through calls-to-action"
         }
       }
+    },
+    referralProgram: {
+      title: "Storm Trade Platform Referral Program",
+      subtitle: "Invite users to the Storm Trade platform through your referral link and get unique rewards by advancing through the program.",
+      keepRewards: "to keep CPM Rewards",
+      level1: {
+        title: "Level 1: Explorer",
+        subtitle: "Eligibility for CPM Rewards",
+        totalRefs: {
+          label: "Total referrals",
+          value: "4"
+        },
+        monthlyRefs: {
+          label: "New referrals per month",
+          value: "1"
+        },
+        volume: {
+          label: "Monthly volume",
+          value: "10k"
+        }
+      },
+      level2: {
+        title: "Level 2: Connector",
+        subtitle: "Eligibility for x2 Rewards",
+        totalRefs: {
+          label: "Total referrals",
+          value: "8"
+        },
+        monthlyRefs: {
+          label: "New referrals per month",
+          value: "2"
+        },
+        volume: {
+          label: "Monthly volume",
+          value: "50k"
+        }
+      },
+      level3: {
+        title: "Level 3: Mastermind",
+        subtitle: "Eligibility for x3.2 Rewards",
+        totalRefs: {
+          label: "Total referrals",
+          value: "16"
+        },
+        monthlyRefs: {
+          label: "New referrals per month",
+          value: "4"
+        },
+        volume: {
+          label: "Monthly volume",
+          value: "150k"
+        }
+      },
+      instantPromotion: {
+        title: "Instant Promotion",
+        level2: {
+          title: "To Level 2",
+          totalRefs: {
+            label: "Total refs",
+            value: "16"
+          },
+          volume: {
+            label: "Volume",
+            value: "150k"
+          }
+        },
+        level3: {
+          title: "To Level 3",
+          totalRefs: {
+            label: "Total refs",
+            value: "32"
+          },
+          volume: {
+            label: "Volume",
+            value: "300k"
+          }
+        }
+      }
     }
   },
   examples: {

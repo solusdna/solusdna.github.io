@@ -121,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
         applicationForm.addEventListener('submit', handleFormSubmit);
     }
 
-    // Обработчик для остальных навигационных ссылок
     document.querySelectorAll('.nav-link:not(.showFormButton)').forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
